@@ -12,15 +12,15 @@ layout: null
     content="Read practical insights from Farika Atkins on English curriculum leadership, inclusive teaching, academic writing, critical thinking, and teacher development."
   />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.farikaatkins.online/blog.html" />
+  <link rel="canonical" href="{{ site.url }}/blog.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Farika Atkins Blog | English Education Leadership Insights" />
   <meta
     property="og:description"
     content="Education thought leadership for school leaders and English teachers working across international and secondary programmes."
   />
-  <meta property="og:url" content="https://www.farikaatkins.online/blog.html" />
-  <meta property="og:image" content="https://www.farikaatkins.online/farika.png" />
+  <meta property="og:url" content="{{ site.url }}/blog.html" />
+  <meta property="og:image" content="{{ site.url }}/farika.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Farika Atkins Blog | English Education Leadership Insights" />
   <meta
@@ -36,7 +36,7 @@ layout: null
     "@type": "Blog",
     "name": "Farika Atkins Blog",
     "description": "English education leadership insights from Farika Atkins.",
-    "url": "https://www.farikaatkins.online/blog.html",
+    "url": "{{ site.url }}/blog.html",
     "publisher": {
       "@type": "Person",
       "name": "Farika Atkins"
@@ -110,27 +110,28 @@ layout: null
       gap: 24px;
       padding: 24px 0 56px;
     }
-    .card {
+    .blog-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
       box-shadow: 0 16px 30px rgba(74, 20, 140, 0.06);
     }
-    .card time {
+    .blog-card time {
       color: var(--muted);
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-    .card h2 {
+    .blog-card h3 {
       font-size: 31px;
       margin: 12px 0 12px;
     }
-    .card p {
+    .blog-card p {
       margin: 0 0 20px;
       color: var(--muted);
     }
+    .blog-link,
     .cta {
       display: inline-flex;
       align-items: center;
@@ -158,8 +159,8 @@ layout: null
 <body>
   <div class="container">
     <div class="topbar">
-      <a href="index.html" class="brand">Farika Atkins</a>
-      <a href="index.html#contact" class="cta">Invite Farika to Speak</a>
+      <a href="{{ '/' | relative_url }}" class="brand">Farika Atkins</a>
+      <a href="{{ '/index.html#contact' | relative_url }}" class="cta">Invite Farika to Speak</a>
     </div>
 
     <section class="hero">
@@ -175,41 +176,9 @@ layout: null
     </section>
 
     <section class="grid">
-      <article class="card">
-        <time datetime="2026-03-16">March 16, 2026</time>
-        <h2>How literature discussions build critical thinking in secondary English</h2>
-        <p>
-          A leadership view on why structured discussion sharpens academic talk, improves interpretation, and strengthens written analysis.
-        </p>
-        <a class="cta" href="blog/literature-discussions-critical-thinking-secondary-english.html">Read article</a>
-      </article>
-
-      <article class="card">
-        <time datetime="2026-03-16">March 16, 2026</time>
-        <h2>Building curriculum coherence across IMYC, IGCSE, and IBDP English</h2>
-        <p>
-          A practical guide for schools that want stronger progression, better assessment alignment, and less disconnect between year groups.
-        </p>
-        <a class="cta" href="blog/curriculum-coherence-secondary-english.html">Read article</a>
-      </article>
-
-      <article class="card">
-        <time datetime="2026-03-16">March 16, 2026</time>
-        <h2>What inclusive English teaching looks like for neurodivergent learners</h2>
-        <p>
-          Clear classroom moves that improve access, participation, and confidence without lowering challenge.
-        </p>
-        <a class="cta" href="blog/inclusive-english-teaching-neurodivergent-learners.html">Read article</a>
-      </article>
-
-      <article class="card">
-        <time datetime="2026-03-16">March 16, 2026</time>
-        <h2>Teacher coaching that improves writing instruction in secondary school</h2>
-        <p>
-          A practical coaching model for school leaders who want to improve secondary writing instruction.
-        </p>
-        <a class="cta" href="blog/teacher-coaching-writing-instruction.html">Read article</a>
-      </article>
+      {% for post in site.posts %}
+        {% include blog-card.html post=post %}
+      {% endfor %}
     </section>
 
     <section class="panel">
@@ -220,7 +189,7 @@ layout: null
     </section>
 
     <footer>
-      <a href="index.html">Back to homepage</a>
+      <a href="{{ '/' | relative_url }}">Back to homepage</a>
     </footer>
   </div>
 </body>

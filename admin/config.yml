@@ -39,21 +39,30 @@ collections:
                 fields:
                   - { label: "Contact Email", name: "email", widget: "string" }
                   - { label: "Contact Phone", name: "phone", widget: "string" }
-      - name: "blog_index"
-        label: "Blog Hub (Link New Posts Here)"
-        file: "blog.html"
-        fields:
-          - { label: "Full HTML", name: "body", widget: "code", default_language: "html" }
 
   - name: "posts"
-    label: "New Blog posts"
+    label: "Blog Posts"
     label_singular: "Blog Post"
-    folder: "blog/posts"
+    folder: "_posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{slug}}.html"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Category", name: "category", widget: "string", default: "English Education" }
+      - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Critical Thinking"
+          - "Curriculum Leadership"
+          - "Inclusive Instruction"
+          - "Teacher Development"
+          - "English Education"
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Meta Description", name: "description", widget: "string" }
+      - { label: "Meta Description", name: "description", widget: "text" }
+      - { label: "Card Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Article Intro", name: "intro", widget: "text" }
+      - { label: "Callout Title", name: "callout_title", widget: "string" }
+      - { label: "Callout Text", name: "callout_text", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }

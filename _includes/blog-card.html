@@ -1,0 +1,8 @@
+<article class="blog-card{% if include.reveal %} reveal{% endif %}"{% if include.delay %} style="transition-delay: {{ include.delay }};"{% endif %}>
+  <time datetime="{{ include.post.date | date: '%Y-%m-%d' }}">{{ include.post.date | date: "%B %-d, %Y" }}</time>
+  <h3>{{ include.post.title }}</h3>
+  <p>
+    {{ include.post.excerpt | default: include.post.description }}
+  </p>
+  <a class="blog-link" href="{{ include.post.url | relative_url }}">Read article</a>
+</article>

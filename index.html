@@ -559,41 +559,19 @@ layout: null
         </div>
 
         <div class="grid-3">
-          <article class="blog-card reveal">
-            <time datetime="2026-03-16">March 16, 2026</time>
-            <h3>How literature discussions build critical thinking in secondary English</h3>
-            <p>
-              Why structured discussion helps students move from opinion to interpretation and gives departments a stronger route into analytical writing.
-            </p>
-            <a class="blog-link" href="blog/literature-discussions-critical-thinking-secondary-english.html">Read article</a>
-          </article>
-
-          <article class="blog-card reveal" style="transition-delay: 120ms;">
-            <time datetime="2026-03-16">March 16, 2026</time>
-            <h3>Building curriculum coherence across IMYC, IGCSE, and IBDP English</h3>
-            <p>
-              A practical framework for aligning skills, assessment, and reading demands across three major programme stages without losing teacher autonomy.
-            </p>
-            <a class="blog-link" href="blog/curriculum-coherence-secondary-english.html">Read article</a>
-          </article>
-
-          <article class="blog-card reveal" style="transition-delay: 240ms;">
-            <time datetime="2026-03-16">March 16, 2026</time>
-            <h3>What inclusive English teaching looks like for neurodivergent learners</h3>
-            <p>
-              Clear strategies for planning lessons, classroom talk, and writing support so students with different processing needs can participate well.
-            </p>
-            <a class="blog-link" href="blog/inclusive-english-teaching-neurodivergent-learners.html">Read article</a>
-          </article>
-
-          <article class="blog-card reveal" style="transition-delay: 360ms;">
-            <time datetime="2026-03-16">March 16, 2026</time>
-            <h3>Teacher coaching that improves writing instruction in secondary school</h3>
-            <p>
-              How department heads can move from generic observation feedback to coaching that sharpens writing outcomes and consistency.
-            </p>
-            <a class="blog-link" href="blog/teacher-coaching-writing-instruction.html">Read article</a>
-          </article>
+          {% for post in site.posts limit: 4 %}
+            {% case forloop.index0 %}
+              {% when 0 %}
+                {% assign reveal_delay = nil %}
+              {% when 1 %}
+                {% assign reveal_delay = "120ms" %}
+              {% when 2 %}
+                {% assign reveal_delay = "240ms" %}
+              {% else %}
+                {% assign reveal_delay = "360ms" %}
+            {% endcase %}
+            {% include blog-card.html post=post reveal=true delay=reveal_delay %}
+          {% endfor %}
         </div>
 
         <div class="callout-panel reveal" style="margin-top: 36px;">

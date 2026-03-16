@@ -11,12 +11,26 @@ Publish thought-leadership articles that strengthen Farika Atkins' professional 
 - International school leadership
 
 ## Publishing Steps
-1. Duplicate [`blog/post-template.html`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-main%202/blog/post-template.html).
-2. Save the new article in `/blog/` with a short keyword-rich slug.
-3. Add the article to [`blog.html`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-main%202/blog.html).
-4. Add the article card to the homepage blog section in [`index.html`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-main%202/index.html).
-5. Add the URL to [`sitemap.xml`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-main%202/sitemap.xml).
-6. Add the article to [`rss.xml`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-main%202/rss.xml).
+1. Create the article in Sveltia CMS or add a markdown file to [`_posts`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/_posts).
+2. Use a dated filename in this format: `YYYY-MM-DD-keyword-rich-slug.md`.
+3. Fill in the frontmatter fields:
+   - `title`
+   - `seo_title`
+   - `category`
+   - `date`
+   - `description`
+   - `excerpt`
+   - `intro`
+   - `callout_title`
+   - `callout_text`
+4. Write the article body in markdown below the frontmatter.
+5. Push to `main`.
+
+## What Updates Automatically
+- [`blog.html`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/blog.html)
+- recent posts section in [`index.html`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/index.html)
+- [`sitemap.xml`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/sitemap.xml)
+- [`rss.xml`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/rss.xml)
 
 ## SEO Checklist
 - Primary keyword in title
@@ -25,6 +39,7 @@ Publish thought-leadership articles that strengthen Farika Atkins' professional 
 - Meta description between 150 and 160 characters
 - Internal link back to the blog or homepage
 - Closing CTA for speaking, consulting, or workshops
+- Keep the slug aligned with the article topic because posts publish under `/blog/slug.html`
 
 ## Best Next Topics
 - How school leaders can improve writing outcomes across a department

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}</title>
+  <meta name="description" content="{{ page.description }}" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:image" content="{{ site.url }}/farika.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:image" content="{{ site.url }}/farika.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ page.title | jsonify }},
+    "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+    "dateModified": "{{ page.date | date: '%Y-%m-%d' }}",
+    "author": {
+      "@type": "Person",
+      "name": "Farika Atkins"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Farika Atkins"
+    },
+    "description": {{ page.description | jsonify }},
+    "url": "{{ site.url }}{{ page.url }}"
+  }
+  </script>
+  <style>
+    body { margin: 0; font-family: "Lato", sans-serif; background: #fcf9fe; color: #2d2d2d; line-height: 1.75; }
+    h1, h2, h3 { font-family: "Playfair Display", serif; color: #4a148c; line-height: 1.2; }
+    .container { width: min(820px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar { padding: 26px 0 16px; font-size: 14px; }
+    .topbar a { color: #4a148c; text-decoration: none; font-weight: 700; }
+    article { padding: 10px 0 64px; }
+    .eyebrow { color: #8a6b00; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; font-weight: 700; }
+    h1 { font-size: clamp(36px, 7vw, 56px); margin: 12px 0 18px; }
+    .meta { color: #666666; font-size: 14px; }
+    p { margin: 0 0 18px; }
+    ul { margin: 0 0 18px; padding-left: 20px; }
+    .lead { font-size: 20px; color: #555555; }
+    .callout {
+      margin-top: 32px;
+      padding: 24px;
+      border-radius: 16px;
+      background: #fff7e2;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar"><a href="{{ '/blog.html' | relative_url }}">Back to the blog</a></div>
+    <article>
+      <div class="eyebrow">{{ page.category }}</div>
+      <h1>{{ page.title }}</h1>
+      <p class="meta">By Farika Atkins | {{ page.date | date: "%B %-d, %Y" }}</p>
+      <p class="lead">
+        {{ page.intro }}
+      </p>
+      {{ content }}
+
+      <div class="callout">
+        <h3 style="margin-top: 0;">{{ page.callout_title }}</h3>
+        <p style="margin-bottom: 0;">
+          {{ page.callout_text }}
+        </p>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

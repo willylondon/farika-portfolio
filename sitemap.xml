@@ -1,27 +1,20 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.farikaatkins.online/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
   </url>
   <url>
-    <loc>https://www.farikaatkins.online/blog.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <loc>{{ site.url }}/blog.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
   </url>
+  {% for post in site.posts %}
   <url>
-    <loc>https://www.farikaatkins.online/blog/literature-discussions-critical-thinking-secondary-english.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
   </url>
-  <url>
-    <loc>https://www.farikaatkins.online/blog/curriculum-coherence-secondary-english.html</loc>
-    <lastmod>2026-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://www.farikaatkins.online/blog/inclusive-english-teaching-neurodivergent-learners.html</loc>
-    <lastmod>2026-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://www.farikaatkins.online/blog/teacher-coaching-writing-instruction.html</loc>
-    <lastmod>2026-03-16</lastmod>
-  </url>
+  {% endfor %}
 </urlset>

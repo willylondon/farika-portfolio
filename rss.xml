@@ -1,42 +1,20 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
     <title>Farika Atkins Blog</title>
-    <link>https://www.farikaatkins.online/blog.html</link>
+    <link>{{ site.url }}/blog.html</link>
     <description>English education leadership insights from Farika Atkins.</description>
-    <language>en-jm</language>
-    <lastBuildDate>Mon, 16 Mar 2026 18:00:00 GMT</lastBuildDate>
-
+    {% for post in site.posts %}
     <item>
-      <title>How literature discussions build critical thinking in secondary English</title>
-      <link>https://www.farikaatkins.online/blog/literature-discussions-critical-thinking-secondary-english.html</link>
-      <guid>https://www.farikaatkins.online/blog/literature-discussions-critical-thinking-secondary-english.html</guid>
-      <pubDate>Mon, 16 Mar 2026 18:00:00 GMT</pubDate>
-      <description>Farika Atkins explains how structured literature discussions can build critical thinking, academic language, and stronger written analysis in secondary English.</description>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid>{{ site.url }}{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description>{{ post.description | xml_escape }}</description>
     </item>
-
-    <item>
-      <title>Building curriculum coherence across IMYC, IGCSE, and IBDP English</title>
-      <link>https://www.farikaatkins.online/blog/curriculum-coherence-secondary-english.html</link>
-      <guid>https://www.farikaatkins.online/blog/curriculum-coherence-secondary-english.html</guid>
-      <pubDate>Mon, 16 Mar 2026 12:00:00 GMT</pubDate>
-      <description>Farika Atkins explains how schools can build curriculum coherence across IMYC, IGCSE, and IBDP English.</description>
-    </item>
-
-    <item>
-      <title>What inclusive English teaching looks like for neurodivergent learners</title>
-      <link>https://www.farikaatkins.online/blog/inclusive-english-teaching-neurodivergent-learners.html</link>
-      <guid>https://www.farikaatkins.online/blog/inclusive-english-teaching-neurodivergent-learners.html</guid>
-      <pubDate>Mon, 16 Mar 2026 12:00:00 GMT</pubDate>
-      <description>Practical strategies for inclusive English teaching that support neurodivergent learners without lowering challenge.</description>
-    </item>
-
-    <item>
-      <title>Teacher coaching that improves writing instruction in secondary school</title>
-      <link>https://www.farikaatkins.online/blog/teacher-coaching-writing-instruction.html</link>
-      <guid>https://www.farikaatkins.online/blog/teacher-coaching-writing-instruction.html</guid>
-      <pubDate>Mon, 16 Mar 2026 12:00:00 GMT</pubDate>
-      <description>A practical coaching model for school leaders who want to improve writing instruction in secondary English classrooms.</description>
-    </item>
+    {% endfor %}
   </channel>
 </rss>
