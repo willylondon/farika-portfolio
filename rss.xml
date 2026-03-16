@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Farika Atkins Blog</title>
+    <link>https://www.farikaatkins.online/blog.html</link>
+    <description>English education leadership insights from Farika Atkins.</description>
+    <language>en-jm</language>
+    <lastBuildDate>Mon, 16 Mar 2026 12:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Building curriculum coherence across IMYC, IGCSE, and IBDP English</title>
+      <link>https://www.farikaatkins.online/blog/curriculum-coherence-secondary-english.html</link>
+      <guid>https://www.farikaatkins.online/blog/curriculum-coherence-secondary-english.html</guid>
+      <pubDate>Mon, 16 Mar 2026 12:00:00 GMT</pubDate>
+      <description>Farika Atkins explains how schools can build curriculum coherence across IMYC, IGCSE, and IBDP English.</description>
+    </item>
+
+    <item>
+      <title>What inclusive English teaching looks like for neurodivergent learners</title>
+      <link>https://www.farikaatkins.online/blog/inclusive-english-teaching-neurodivergent-learners.html</link>
+      <guid>https://www.farikaatkins.online/blog/inclusive-english-teaching-neurodivergent-learners.html</guid>
+      <pubDate>Mon, 16 Mar 2026 12:00:00 GMT</pubDate>
+      <description>Practical strategies for inclusive English teaching that support neurodivergent learners without lowering challenge.</description>
+    </item>
+
+    <item>
+      <title>Teacher coaching that improves writing instruction in secondary school</title>
+      <link>https://www.farikaatkins.online/blog/teacher-coaching-writing-instruction.html</link>
+      <guid>https://www.farikaatkins.online/blog/teacher-coaching-writing-instruction.html</guid>
+      <pubDate>Mon, 16 Mar 2026 12:00:00 GMT</pubDate>
+      <description>A practical coaching model for school leaders who want to improve writing instruction in secondary English classrooms.</description>
+    </item>
+  </channel>
+</rss>
