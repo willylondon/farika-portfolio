@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: farikaatkins/farika-portfolio-repo
+  repo: willylondon/farika-portfolio
   branch: main
 
 media_folder: "assets/images"
@@ -14,15 +14,31 @@ collections:
         label: "Home Page"
         file: "content.json"
         fields:
-          - { label: "Hero Kicker", name: "homepage.hero.kicker", widget: "string" }
-          - { label: "Hero Title", name: "homepage.hero.title", widget: "string" }
-          - { label: "Hero Subtext", name: "homepage.hero.subtext", widget: "text" }
-          - { label: "About Kicker", name: "homepage.about.kicker", widget: "string" }
-          - { label: "About Title", name: "homepage.about.title", widget: "string" }
-          - { label: "About Text 1", name: "homepage.about.text1", widget: "text" }
-          - { label: "About Text 2", name: "homepage.about.text2", widget: "text" }
-          - { label: "Contact Email", name: "homepage.contact.email", widget: "string" }
-          - { label: "Contact Phone", name: "homepage.contact.phone", widget: "string" }
+          - name: homepage
+            label: Home Page Content
+            widget: object
+            fields:
+              - name: hero
+                label: Hero Section
+                widget: object
+                fields:
+                  - { label: "Hero Kicker", name: "kicker", widget: "string" }
+                  - { label: "Hero Title", name: "title", widget: "string" }
+                  - { label: "Hero Subtext", name: "subtext", widget: "text" }
+              - name: about
+                label: About Section
+                widget: object
+                fields:
+                  - { label: "About Kicker", name: "kicker", widget: "string" }
+                  - { label: "About Title", name: "title", widget: "string" }
+                  - { label: "About Text 1", name: "text1", widget: "text" }
+                  - { label: "About Text 2", name: "text2", widget: "text" }
+              - name: contact
+                label: Contact Info
+                widget: object
+                fields:
+                  - { label: "Contact Email", name: "email", widget: "string" }
+                  - { label: "Contact Phone", name: "phone", widget: "string" }
       - name: "blog_index"
         label: "Blog Hub (Link New Posts Here)"
         file: "blog.html"
