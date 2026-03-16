@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farika Atkins | Blog</title>
+  <meta name="description" id="meta-desc" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body { margin: 0; font-family: "Lato", sans-serif; background: #fcf9fe; color: #2d2d2d; line-height: 1.75; }
+    h1, h2, h3 { font-family: "Playfair Display", serif; color: #4a148c; line-height: 1.2; }
+    .container { width: min(820px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar { padding: 26px 0 16px; font-size: 14px; }
+    .topbar a { color: #4a148c; text-decoration: none; font-weight: 700; }
+    article { padding: 10px 0 64px; }
+    .eyebrow { color: #8a6b00; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; font-weight: 700; }
+    h1 { font-size: clamp(36px, 7vw, 56px); margin: 12px 0 18px; }
+    .meta { color: #666666; font-size: 14px; }
+    #content img { max-width: 100%; height: auto; border-radius: 8px; }
+    .callout {
+      margin-top: 32px;
+      padding: 24px;
+      border-radius: 16px;
+      background: #fff7e2;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar"><a href="blog.html">Back to the blog</a></div>
+    <article>
+      <div id="category" class="eyebrow"></div>
+      <h1 id="title">Loading...</h1>
+      <p id="meta" class="meta"></p>
+      <div id="content"></div>
+      
+      <div class="callout">
+        <h3 style="margin-top: 0;">Workshop opportunity</h3>
+        <p style="margin-bottom: 0;">
+          Farika Atkins is available to lead school conversations and training sessions on inclusive instruction, curriculum design, and practical teacher support in English classrooms.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const postSlug = urlParams.get('p');
+
+    if (postSlug) {
+      fetch('blog/posts/' + postSlug + '.md')
+        .then(response => {
+          if (!response.ok) throw new Error('Post not found');
+          return response.text();
+        })
+        .then(text => {
+          // Rudimentary frontmatter parser
+          const parts = text.split('---');
+          let content = text;
+          let title = postSlug;
+          let category = 'Article';
+          let date = '';
+
+          if (parts.length >= 3) {
+            const yaml = parts[1];
+            content = parts.slice(2).join('---');
+            
+            const titleMatch = yaml.match(/title:\s*["']?(.+?)["']?\n/);
+            const categoryMatch = yaml.match(/category:\s*["']?(.+?)["']?\n/);
+            const dateMatch = yaml.match(/date:\s*(.+?)\n/);
+            
+            if (titleMatch) title = titleMatch[1];
+            if (categoryMatch) category = categoryMatch[1];
+            if (dateMatch) date = dateMatch[1];
+          }
+
+          document.title = title + ' | Farika Atkins';
+          document.getElementById('title').innerText = title;
+          document.getElementById('category').innerText = category;
+          document.getElementById('meta').innerText = 'By Farika Atkins | ' + (date ? new Date(date).toLocaleDateString() : '');
+          document.getElementById('content').innerHTML = marked.parse(content);
+        })
+        .catch(err => {
+          document.getElementById('title').innerText = 'Post not found';
+          document.getElementById('content').innerText = 'Sorry, the article you are looking for could not be found.';
+        });
+    } else {
+       window.location.href = 'blog.html';
+    }
+  </script>
+</body>
+</html>

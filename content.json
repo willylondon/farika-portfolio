@@ -1,0 +1,22 @@
+{
+  "homepage": {
+    "hero": {
+      "kicker": "English Education Leadership from Jamaica",
+      "title": "Farika Atkins",
+      "subtext": "English education leader, curriculum strategist, and speaker helping schools build rigorous, inclusive, human-centered learning across secondary programmes."
+    },
+    "about": {
+      "kicker": "Professional Profile",
+      "title": "Curriculum leadership grounded in strong English teaching",
+      "text1": "I am an experienced English Language and Literature educator and department leader focused on the intersection of rigorous instruction, inclusive practice, and long-term student growth.",
+      "text2": "My work spans grades 7 through 13 and supports schools working across IMYC, Cambridge Lower Secondary, IGCSE, and IBDP frameworks. I partner with teachers and school leaders to strengthen curriculum coherence, assessment quality, and classroom culture."
+    },
+    "contact": {
+      "email": "farikaatkins@gmail.com",
+      "phone": "876-295-2776"
+    }
+  },
+  "blog": {
+    "posts": []
+  }
+}

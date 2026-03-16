@@ -411,9 +411,9 @@ layout: null
     <section class="hero">
       <div class="container grid-2 items-center">
         <div>
-          <span class="hero-kicker reveal">English Education Leadership from Jamaica</span>
-          <h1 class="reveal" style="transition-delay: 100ms;">Farika Atkins</h1>
-          <p class="hero-sub reveal" style="transition-delay: 200ms;">
+          <span class="hero-kicker reveal" data-cms="homepage.hero.kicker">English Education Leadership from Jamaica</span>
+          <h1 class="reveal" style="transition-delay: 100ms;" data-cms="homepage.hero.title">Farika Atkins</h1>
+          <p class="hero-sub reveal" style="transition-delay: 200ms;" data-cms="homepage.hero.subtext">
             English education leader, curriculum strategist, and speaker helping schools build rigorous, inclusive, human-centered learning across secondary programmes.
           </p>
           <div class="hero-meta reveal" style="transition-delay: 250ms;">
@@ -436,12 +436,12 @@ layout: null
       <div class="container">
         <div class="grid-2">
           <div class="reveal">
-            <span class="section-kicker">Professional Profile</span>
-            <h2 style="margin-bottom: 24px;">Curriculum leadership grounded in strong English teaching</h2>
-            <p>
+            <span class="section-kicker" data-cms="homepage.about.kicker">Professional Profile</span>
+            <h2 style="margin-bottom: 24px;" data-cms="homepage.about.title">Curriculum leadership grounded in strong English teaching</h2>
+            <p data-cms="homepage.about.text1">
               I am an experienced English Language and Literature educator and department leader focused on the intersection of rigorous instruction, inclusive practice, and long-term student growth.
             </p>
-            <p>
+            <p data-cms="homepage.about.text2">
               My work spans grades 7 through 13 and supports schools working across IMYC, Cambridge Lower Secondary, IGCSE, and IBDP frameworks. I partner with teachers and school leaders to strengthen curriculum coherence, assessment quality, and classroom culture.
             </p>
 
@@ -653,5 +653,6 @@ layout: null
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="cms-client.js"></script>
 </body>
 </html>

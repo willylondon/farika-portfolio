@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: farikaatkins/farika-portfolio-repo
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "homepage"
+        label: "Home Page"
+        file: "content.json"
+        fields:
+          - { label: "Hero Kicker", name: "homepage.hero.kicker", widget: "string" }
+          - { label: "Hero Title", name: "homepage.hero.title", widget: "string" }
+          - { label: "Hero Subtext", name: "homepage.hero.subtext", widget: "text" }
+          - { label: "About Kicker", name: "homepage.about.kicker", widget: "string" }
+          - { label: "About Title", name: "homepage.about.title", widget: "string" }
+          - { label: "About Text 1", name: "homepage.about.text1", widget: "text" }
+          - { label: "About Text 2", name: "homepage.about.text2", widget: "text" }
+          - { label: "Contact Email", name: "homepage.contact.email", widget: "string" }
+          - { label: "Contact Phone", name: "homepage.contact.phone", widget: "string" }
+      - name: "blog_index"
+        label: "Blog Hub (Link New Posts Here)"
+        file: "blog.html"
+        fields:
+          - { label: "Full HTML", name: "body", widget: "code", default_language: "html" }
+
+  - name: "posts"
+    label: "New Blog posts"
+    label_singular: "Blog Post"
+    folder: "blog/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "string", default: "English Education" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Meta Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
