@@ -3,7 +3,7 @@ layout: post
 title: "How school leaders can improve student writing across subjects"
 seo_title: "Improve Student Writing Across Subjects | Farika Atkins"
 category: "Education Leadership"
-date: 2026-03-23 12:00:00 -0500
+date: 2026-03-23 08:00:00 -0500
 description: "Practical strategies school leaders can use to improve student writing across subjects through coaching, consistency, and curriculum alignment."
 excerpt: "A clear leadership framework for improving writing outcomes across departments, not just in English classrooms."
 intro: "If schools want stronger writing outcomes, the work cannot sit only with English teachers. School leaders improve writing across subjects when they set shared expectations, coach teachers with precision, and create routines that help students write clearly in every classroom."
