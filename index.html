@@ -9,7 +9,7 @@ layout: null
   <title>Farika Atkins | English Education Leader, Consultant, and Speaker</title>
   <meta
     name="description"
-    content="Farika Atkins is an English education leader and curriculum consultant in Jamaica, known for teacher development, inclusive instruction, and secondary English curriculum leadership."
+    content="Farika Atkins is a Jamaican English education leader, curriculum consultant, and speaker helping secondary schools build rigorous, inclusive English programmes across IGCSE, Cambridge, and IBDP frameworks."
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#4A148C" />
@@ -36,6 +36,7 @@ layout: null
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <script type="application/ld+json">
   {
@@ -43,23 +44,13 @@ layout: null
     "@type": "Person",
     "name": "Farika Atkins",
     "jobTitle": "English Education Leader and Curriculum Consultant",
-    "description": "English Language and Literature educator, Head of Department, curriculum leader, and speaker.",
-    "url": "https://www.farikaatkins.online/",
-    "image": "https://www.farikaatkins.online/farika.png",
-    "email": "mailto:farikaatkins@gmail.com",
-    "telephone": "+1-876-295-2776",
+    "url": "https://www.farikaatkins.online",
+    "email": "farikaatkins@gmail.com",
+    "telephone": "+18762952776",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "JM"
-    },
-    "knowsAbout": [
-      "English education leadership",
-      "Secondary English curriculum design",
-      "Teacher coaching",
-      "Inclusive instruction",
-      "Academic writing instruction",
-      "International school curriculum alignment"
-    ]
+    }
   }
   </script>
 
@@ -495,7 +486,7 @@ layout: null
 
         <div class="grid-3">
           <div class="card reveal">
-            <span class="card-icon">EL</span>
+            <span class="card-icon"><i data-lucide="presentation"></i></span>
             <h3>Instructional Leadership</h3>
             <p style="font-size: 15px; margin-top: 10px; color: var(--text-muted);">
               Designing stronger English instruction through literary analysis, academic writing, and scaffolds that build student independence.
@@ -503,7 +494,7 @@ layout: null
           </div>
 
           <div class="card reveal" style="transition-delay: 100ms;">
-            <span class="card-icon">CD</span>
+            <span class="card-icon"><i data-lucide="layout-template"></i></span>
             <h3>Curriculum Design</h3>
             <p style="font-size: 15px; margin-top: 10px; color: var(--text-muted);">
               Mapping progression across IMYC, IGCSE, and IBDP so teachers understand what quality looks like from one year level to the next.
@@ -511,7 +502,7 @@ layout: null
           </div>
 
           <div class="card reveal" style="transition-delay: 200ms;">
-            <span class="card-icon">IE</span>
+            <span class="card-icon"><i data-lucide="users"></i></span>
             <h3>Inclusive Education</h3>
             <p style="font-size: 15px; margin-top: 10px; color: var(--text-muted);">
               Applying differentiated, UDL-informed approaches that improve access for SEN, ADHD, ESL, and mixed-readiness classrooms.
@@ -519,7 +510,7 @@ layout: null
           </div>
 
           <div class="card reveal" style="transition-delay: 300ms;">
-            <span class="card-icon">DS</span>
+            <span class="card-icon"><i data-lucide="cpu"></i></span>
             <h3>Digital Strategy</h3>
             <p style="font-size: 15px; margin-top: 10px; color: var(--text-muted);">
               Integrating AI-assisted planning, digital workflows, and practical tools that reduce teacher friction without lowering standards.
@@ -527,7 +518,7 @@ layout: null
           </div>
 
           <div class="card reveal" style="transition-delay: 400ms;">
-            <span class="card-icon">TC</span>
+            <span class="card-icon"><i data-lucide="message-square"></i></span>
             <h3>Teacher Coaching</h3>
             <p style="font-size: 15px; margin-top: 10px; color: var(--text-muted);">
               Building confident teams through feedback, professional learning, and department-level systems that move practice forward.
@@ -535,7 +526,7 @@ layout: null
           </div>
 
           <div class="card reveal" style="transition-delay: 500ms;">
-            <span class="card-icon">AI</span>
+            <span class="card-icon"><i data-lucide="shield-check"></i></span>
             <h3>Academic Integrity</h3>
             <p style="font-size: 15px; margin-top: 10px; color: var(--text-muted);">
               Strengthening moderation, assessment quality, and exam readiness while protecting authentic student thinking and performance.
@@ -551,9 +542,6 @@ layout: null
           <div class="reveal">
             <span class="section-kicker">Education Blog</span>
             <h2>Recent insights for teachers and school leaders</h2>
-            <p style="max-width: 650px; color: var(--text-muted); margin-top: 14px;">
-              This new blog section is designed to grow Farika Atkins' professional authority through practical writing on English curriculum leadership, inclusive teaching, and teacher development.
-            </p>
           </div>
           <a href="blog.html" class="btn primary reveal">Browse All Articles</a>
         </div>
@@ -572,13 +560,6 @@ layout: null
             {% endcase %}
             {% include blog-card.html post=post reveal=true delay=reveal_delay %}
           {% endfor %}
-        </div>
-
-        <div class="callout-panel reveal" style="margin-top: 36px;">
-          <h3 style="margin-bottom: 12px;">How this supports Farika's goals</h3>
-          <p style="margin: 0; color: var(--text-main);">
-            These articles give schools, conference organizers, and education leaders concrete evidence of Farika's thinking. They are also easy to adapt into LinkedIn posts, speaking outlines, and workshop talking points.
-          </p>
         </div>
       </div>
     </section>
@@ -600,16 +581,43 @@ layout: null
           </p>
         </div>
 
-        <a href="mailto:farikaatkins@gmail.com?subject=Speaking%20or%20Consulting%20Inquiry" class="btn primary reveal" style="padding: 16px 32px; font-size: 16px;">
-          Request an Engagement
-        </a>
+        <form action="https://formspree.io/f/placeholder_id" method="POST" class="reveal" style="max-width: 500px; margin: 0 auto; text-align: left; display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label for="name" style="display: block; margin-bottom: 6px; font-weight: 700; font-size: 14px;">Full name</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit;">
+          </div>
+          <div>
+            <label for="email" style="display: block; margin-bottom: 6px; font-weight: 700; font-size: 14px;">Email address</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit;">
+          </div>
+          <div>
+            <label for="engagement" style="display: block; margin-bottom: 6px; font-weight: 700; font-size: 14px;">Type of engagement</label>
+            <select id="engagement" name="engagement" style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; background: var(--surface);">
+              <option value="Speaking">Speaking</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Workshop">Workshop</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" style="display: block; margin-bottom: 6px; font-weight: 700; font-size: 14px;">Message</label>
+            <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; resize: vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn primary" style="width: 100%; padding: 16px; font-size: 16px;">Request an Engagement</button>
+        </form>
       </div>
     </section>
   </main>
 
   <footer style="background: var(--primary); color: white; padding: 40px 0; text-align: center; font-size: 14px;">
     <div class="container">
-      <p>&copy; <span id="year"></span> Farika Atkins. English Education Leader.</p>
+      <div style="margin-bottom: 20px; display: flex; justify-content: center; gap: 16px;">
+        <!-- Add LinkedIn URL here -->
+        <a href="#" target="_blank" rel="noopener noreferrer" style="color: white; opacity: 0.8; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+          <i data-lucide="linkedin"></i>
+        </a>
+      </div>
+      <p>&copy; 2026 Farika Atkins. All rights reserved.</p>
     </div>
   </footer>
 
@@ -629,8 +637,8 @@ layout: null
     }, { threshold: 0.1 });
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
   <script src="cms-client.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
