@@ -15,10 +15,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}" />
   <meta name="twitter:description" content="{{ page.description }}" />
-  <meta name="twitter:image" content="{{ site.url }}/farika.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,47 +35,209 @@
     "url": "{{ site.url }}{{ page.url }}"
   }
   </script>
+
   <style>
-    body { margin: 0; font-family: "Lato", sans-serif; background: #fcf9fe; color: #2d2d2d; line-height: 1.75; }
-    h1, h2, h3 { font-family: "Playfair Display", serif; color: #4a148c; line-height: 1.2; }
-    .container { width: min(820px, calc(100% - 48px)); margin: 0 auto; }
-    .topbar { padding: 26px 0 16px; font-size: 14px; }
-    .topbar a { color: #4a148c; text-decoration: none; font-weight: 700; }
-    article { padding: 10px 0 64px; }
-    .eyebrow { color: #8a6b00; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; font-weight: 700; }
-    h1 { font-size: clamp(36px, 7vw, 56px); margin: 12px 0 18px; }
-    .meta { color: #666666; font-size: 14px; }
-    p { margin: 0 0 18px; }
-    ul { margin: 0 0 18px; padding-left: 20px; }
-    .lead { font-size: 20px; color: #555555; }
-    .callout {
-      margin-top: 32px;
-      padding: 24px;
-      border-radius: 16px;
-      background: #fff7e2;
-      border: 1px solid rgba(212, 175, 55, 0.45);
+    :root {
+      --bg: #f9f7f2;
+      --text-main: #1c1c1a;
+      --text-muted: #6b6860;
+      --accent: #9a8f6e;
+      --section-dark: #1c1c1a;
+      --card-warm: #ede9df;
+      --hero-panel: #e6e0d2;
+      --stat-strip: #ddd8c8;
+      
+      --font-serif: Georgia, serif;
+      --font-sans: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, sans-serif;
+      --max-width: 1100px;
+      --ease: cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      margin: 0;
+      color: var(--text-main);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .flex { display: flex; }
+    .justify-between { justify-content: space-between; }
+    .items-center { align-items: center; }
+
+    /* Header */
+    header {
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .brand {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--text-main);
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-link {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .nav-link:hover { color: var(--text-main); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: 2px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--section-dark);
+      color: #fff;
+      border: 1px solid var(--section-dark);
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+    }
+    .btn:hover { background: #000; }
+    
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background-color: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 999;
+      transition: transform 0.2s;
+    }
+    .whatsapp-btn:hover { transform: scale(1.05); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding: 24px 0;
+      margin-top: 80px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy { font-size: 10px; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 24px; }
+
+    /* Article specific */
+    .post-container { max-width: 800px; margin: 0 auto; padding: 60px 40px; }
+    .post-topbar { margin-bottom: 40px; }
+    .post-topbar a { color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px solid var(--text-muted); padding-bottom: 2px;}
+    .post-eyebrow { font-size: 10px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; flex-shrink: 0;}
+    .post-title { font-size: clamp(32px, 5vw, 48px); letter-spacing: -1px; margin-bottom: 24px; line-height: 1.1; }
+    .post-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 48px; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 24px;}
+    .post-body { font-size: 17px; line-height: 1.7; color: var(--text-main); }
+    .post-body p { margin-bottom: 24px; }
+    .post-body h2 { font-size: 32px; margin: 48px 0 24px; letter-spacing: -0.5px;}
+    .post-body h3 { font-size: 20px; margin: 32px 0 16px; font-family: var(--font-sans); }
+    .post-body ul { margin-bottom: 24px; padding-left: 20px; }
+    .post-body blockquote { font-family: var(--font-serif); font-size: 20px; font-style: italic; border-left: 2px solid var(--accent); margin: 0 0 24px; padding-left: 24px; color: var(--text-muted);}
+    .post-lead { font-size: 20px; color: var(--text-muted); margin-bottom: 40px; font-style: italic; font-family: var(--font-serif); line-height: 1.6;}
+    .callout { background: var(--card-warm); padding: 40px; border: 1px solid rgba(0,0,0,0.08); margin: 60px 0 0; }
+    .callout h3 { margin-top: 0; margin-bottom: 12px; font-family: var(--font-serif); font-size: 24px;}
+    .callout p { margin-bottom: 0; font-size: 14px;}
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="topbar"><a href="{{ '/blog.html' | relative_url }}">Back to the blog</a></div>
-    <article>
-      <div class="eyebrow">{{ page.category }}</div>
-      <h1>{{ page.title }}</h1>
-      <p class="meta">By Farika Atkins | {{ page.date | date: "%B %-d, %Y" }}</p>
-      <p class="lead">
-        {{ page.intro }}
-      </p>
-      {{ content }}
 
-      <div class="callout">
-        <h3 style="margin-top: 0;">{{ page.callout_title }}</h3>
-        <p style="margin-bottom: 0;">
-          {{ page.callout_text }}
-        </p>
+  <header>
+    <div class="container flex justify-between items-center">
+      <a href="{{ '/' | relative_url }}" class="brand">Farika Atkins</a>
+      <nav class="nav-links">
+        <a href="{{ '/index.html#about' | relative_url }}" class="nav-link">About</a>
+        <a href="{{ '/index.html#expertise' | relative_url }}" class="nav-link">Expertise</a>
+        <a href="{{ '/blog.html' | relative_url }}" class="nav-link">Insights</a>
+        <a href="{{ '/index.html#contact' | relative_url }}" class="nav-link">Speaking</a>
+      </nav>
+      <a href="{{ '/index.html#contact' | relative_url }}" class="btn">Book a Conversation</a>
+    </div>
+  </header>
+
+  <main class="post-container">
+    <div class="post-topbar"><a href="{{ '/blog.html' | relative_url }}">&larr; Back to the blog</a></div>
+    <article>
+      <div class="post-eyebrow">{{ page.category }}</div>
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">By Farika Atkins | {{ page.date | date: "%B %-d, %Y" }}</div>
+      
+      {% if page.intro %}
+      <div class="post-lead">{{ page.intro }}</div>
+      {% endif %}
+      
+      <div class="post-body">
+        {{ content }}
       </div>
+
+      {% if page.callout_title or page.callout_text %}
+      <div class="callout">
+        {% if page.callout_title %}<h3>{{ page.callout_title }}</h3>{% endif %}
+        {% if page.callout_text %}<p>{{ page.callout_text }}</p>{% endif %}
+      </div>
+      {% endif %}
     </article>
-  </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-copy">&copy; 2026 Farika Atkins. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="{{ '/index.html#about' | relative_url }}" class="nav-link">About</a>
+        <a href="{{ '/blog.html' | relative_url }}" class="nav-link">Blog</a>
+        <a href="{{ '/index.html#contact' | relative_url }}" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/18762952776" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="none">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+    </svg>
+  </a>
+
 </body>
 </html>
