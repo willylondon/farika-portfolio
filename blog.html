@@ -27,9 +27,7 @@ layout: null
     name="twitter:description"
     content="Insights on English curriculum, inclusive classrooms, critical thinking, and teacher coaching from Farika Atkins."
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,154 +41,279 @@ layout: null
     }
   }
   </script>
+
   <style>
     :root {
-      --bg: #fafafa;
-      --surface: #ffffff;
-      --border: #e5ddee;
-      --text: #2d2d2d;
-      --muted: #666666;
-      --primary: #4a148c;
-      --accent: #d4af37;
-      --max: 1100px;
+      --bg: #f9f7f2;
+      --text-main: #1c1c1a;
+      --text-muted: #6b6860;
+      --accent: #9a8f6e;
+      --section-dark: #1c1c1a;
+      --card-warm: #ede9df;
+      --hero-panel: #e6e0d2;
+      --stat-strip: #ddd8c8;
+      
+      --font-serif: Georgia, serif;
+      --font-sans: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, sans-serif;
+      --max-width: 1100px;
+      --ease: cubic-bezier(0.23, 1, 0.32, 1);
     }
+
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: "Lato", sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #f7f1fb 0%, #fafafa 100%);
-      line-height: 1.7;
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    h1, h2, h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--primary);
-      line-height: 1.2;
+
+    h1, h2, h3, h4, .serif {
+      font-family: var(--font-serif);
+      font-weight: 400;
       margin: 0;
+      color: var(--text-main);
     }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
-    .topbar {
-      padding: 24px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .flex { display: flex; }
+    .justify-between { justify-content: space-between; }
+    .items-center { align-items: center; }
+
+    /* Header */
+    header {
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
     .brand {
-      font-family: "Playfair Display", serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--primary);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--text-main);
     }
-    .hero {
-      padding: 48px 0 28px;
-    }
-    .hero p {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 19px;
-      margin-top: 18px;
-    }
-    .pill {
-      display: inline-block;
-      margin-right: 10px;
-      margin-top: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(74, 20, 140, 0.08);
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      padding: 24px 0 56px;
-    }
-    .blog-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 16px 30px rgba(74, 20, 140, 0.06);
-    }
-    .blog-card time {
-      color: var(--muted);
-      font-size: 13px;
+    .nav-links { display: flex; gap: 32px; }
+    .nav-link {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      color: var(--text-muted);
     }
-    .blog-card h3 {
-      font-size: 31px;
-      margin: 12px 0 12px;
-    }
-    .blog-card p {
-      margin: 0 0 20px;
-      color: var(--muted);
-    }
-    .blog-link,
-    .cta {
+    .nav-link:hover { color: var(--text-main); }
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 20px;
-      border-radius: 999px;
-      background: var(--primary);
+      padding: 12px 24px;
+      border-radius: 2px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--section-dark);
       color: #fff;
-      font-weight: 700;
+      border: 1px solid var(--section-dark);
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
     }
-    .panel {
-      margin: 0 0 64px;
-      padding: 26px;
-      background: #fff8e4;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      border-radius: 16px;
+    .btn:hover { background: #000; }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
     }
+    .eyebrow::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--text-muted);
+      margin-right: 12px;
+    }
+    
+    .tag-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border: 1px solid rgba(0,0,0,0.12);
+      border-radius: 2px;
+      color: var(--text-muted);
+    }
+
+    .section-pad { padding: 100px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+
+    /* Blog */
+    .blog-section { background: #f4f1ea; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1px;
+      background: rgba(0,0,0,0.08);
+      border: 1px solid rgba(0,0,0,0.08); /* outer border */
+    }
+    .blog-post {
+      background: #f4f1ea;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .blog-post time {
+      font-size: 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .blog-post h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .blog-post h3 a { color: var(--text-main); }
+    .blog-post p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .read-link {
+      font-size: 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 2px;
+      margin-top: auto;
+    }
+    
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background-color: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 999;
+      transition: transform 0.2s;
+    }
+    .whatsapp-btn:hover { transform: scale(1.05); }
+
+    /* Footer */
     footer {
-      padding: 28px 0 48px;
-      color: var(--muted);
-      font-size: 14px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding: 24px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy { font-size: 10px; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 24px; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="topbar">
-      <a href="{{ '/' | relative_url }}" class="brand">Farika Atkins</a>
-      <a href="{{ '/index.html#contact' | relative_url }}" class="cta">Invite Farika to Speak</a>
-    </div>
 
-    <section class="hero">
-      <h1>English education leadership insights</h1>
-      <p>
-        This blog gives Farika Atkins a dedicated thought-leadership home for curriculum strategy, teacher coaching, academic writing, critical thinking, and inclusive secondary English practice.
-      </p>
-      <div>
-        <span class="pill">Curriculum leadership</span>
-        <span class="pill">Teacher development</span>
-        <span class="pill">Critical thinking</span>
+  <header>
+    <div class="container flex justify-between items-center">
+      <a href="{{ '/' | relative_url }}" class="brand">Farika Atkins</a>
+      <nav class="nav-links">
+        <a href="{{ '/index.html#about' | relative_url }}" class="nav-link">About</a>
+        <a href="{{ '/index.html#expertise' | relative_url }}" class="nav-link">Expertise</a>
+        <a href="{{ '/blog.html' | relative_url }}" class="nav-link">Insights</a>
+        <a href="{{ '/index.html#contact' | relative_url }}" class="nav-link">Speaking</a>
+      </nav>
+      <a href="{{ '/index.html#contact' | relative_url }}" class="btn">Book a Conversation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-pad">
+      <div class="container">
+        <div class="eyebrow">Education Insights</div>
+        <h1 style="font-size: 46px; letter-spacing: -1.5px; margin-bottom: 24px; line-height: 1.1;">English education<br>leadership insights</h1>
+        <p style="color: var(--text-muted); font-size: 15px; max-width: 600px; margin-bottom: 32px;">
+          This blog gives Farika Atkins a dedicated thought-leadership home for curriculum strategy, teacher coaching, academic writing, critical thinking, and inclusive secondary English practice.
+        </p>
+        <div class="tag-pills">
+          <span class="pill">Curriculum leadership</span>
+          <span class="pill">Teacher development</span>
+          <span class="pill">Critical thinking</span>
+        </div>
       </div>
     </section>
 
-    <section class="grid">
-      {% for post in site.posts %}
-        {% include blog-card.html post=post %}
-      {% endfor %}
+    <section class="section-pad blog-section">
+      <div class="container">
+        <div class="blog-grid">
+          {% for post in site.posts %}
+          <div class="blog-post">
+            <time>{{ post.date | date: "%B %d, %Y" }}</time>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a href="{{ post.url | relative_url }}" class="read-link">Read Article</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
     </section>
+  </main>
 
-    <section class="panel">
-      <h3 style="margin-bottom: 10px;">Built for visibility, not vanity traffic</h3>
-      <p style="margin: 0;">
-        Each article is designed to strengthen Farika Atkins' professional authority, give school leaders a clear sample of her thinking, and create source material for LinkedIn, speaking proposals, and consultancy conversations.
-      </p>
-    </section>
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-copy">&copy; 2026 Farika Atkins. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="{{ '/index.html#about' | relative_url }}" class="nav-link">About</a>
+        <a href="{{ '/blog.html' | relative_url }}" class="nav-link">Blog</a>
+        <a href="{{ '/index.html#contact' | relative_url }}" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </footer>
 
-    <footer>
-      <a href="{{ '/' | relative_url }}">Back to homepage</a>
-    </footer>
-  </div>
+  <a href="https://wa.me/18762952776" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="none">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+    </svg>
+  </a>
+
 </body>
 </html>
