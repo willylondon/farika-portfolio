@@ -155,6 +155,8 @@ layout: null
       display: flex;
       flex-direction: column;
       border-left: 1px solid rgba(0,0,0,0.06);
+      /* Add padding for an editorial framed look, bottom padding to avoid stat-strip overlap */
+      padding: 60px 60px 140px 60px;
     }
     .eyebrow {
       font-size: 10px;
@@ -207,20 +209,30 @@ layout: null
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.12);
     }
     .img-placeholder img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      mix-blend-mode: multiply;
-      opacity: 0.9;
+      /* Editorial photo treatment: subtle sepia, desaturated, increased contrast */
+      filter: sepia(15%) saturate(90%) contrast(105%);
+      display: block;
     }
     .stat-strip {
       background: var(--stat-strip);
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       border-top: 1px solid rgba(0,0,0,0.06);
+      /* Reset absolute positioning or margin if we are inside a padded hero-right.
+         Wait, stat-strip is inside hero-right! Since hero-right now has padding: 60px,
+         stat-strip will be inset. Let's pull it out so it spans the bottom. */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
     .stat {
       padding: 24px;
@@ -458,7 +470,7 @@ layout: null
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; border-bottom: none; }
       .hero-left { padding: 40px 0; }
-      .hero-right { border-left: none; border-top: 1px solid rgba(0,0,0,0.06); }
+      .hero-right { border-left: none; border-top: 1px solid rgba(0,0,0,0.06); padding: 40px 20px 140px 20px;}
       .img-placeholder { height: 300px; padding: 20px;}
       .expertise-grid { grid-template-columns: 1fr 1fr; }
       .contact-layout { grid-template-columns: 1fr; gap: 40px; }
