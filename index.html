@@ -150,11 +150,11 @@ layout: null
       justify-content: center;
     }
     .hero-right {
-      background-color: var(--hero-panel);
+      background-color: #1c1c1a; /* Swapped to deep charcoal for a "Dark Gallery" feel */
       position: relative;
       display: flex;
       flex-direction: column;
-      border-left: 1px solid rgba(0,0,0,0.06);
+      border-left: 1px solid rgba(255,255,255,0.05);
       /* Add padding for an editorial framed look, bottom padding to avoid stat-strip overlap */
       padding: 60px 60px 140px 60px;
     }
@@ -217,18 +217,15 @@ layout: null
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* Premium Black & White Editorial treatment to neutralize the purple image background */
-      filter: grayscale(100%) contrast(1.1) brightness(0.95);
+      /* Expert "Color Grading": Shift purple toward a deep plum/navy, warm the skin tones, and add editorial punch */
+      filter: sepia(30%) hue-rotate(-20deg) contrast(1.15) saturate(0.85) brightness(1.05);
       display: block;
     }
     .stat-strip {
-      background: var(--stat-strip);
+      background: #24221f; /* Darker strip to match the gallery look */
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      border-top: 1px solid rgba(0,0,0,0.06);
-      /* Reset absolute positioning or margin if we are inside a padded hero-right.
-         Wait, stat-strip is inside hero-right! Since hero-right now has padding: 60px,
-         stat-strip will be inset. Let's pull it out so it spans the bottom. */
+      border-top: 1px solid rgba(255,255,255,0.1);
       position: absolute;
       bottom: 0;
       left: 0;
@@ -237,20 +234,20 @@ layout: null
     .stat {
       padding: 24px;
       text-align: center;
-      border-right: 1px solid rgba(0,0,0,0.06);
+      border-right: 1px solid rgba(255,255,255,0.05);
     }
     .stat:last-child { border-right: none; }
     .stat-val {
       font-family: var(--font-serif);
       font-size: 24px;
       margin-bottom: 4px;
-      color: var(--text-main);
+      color: var(--accent); /* Swapped to gold for high contrast on dark */
     }
     .stat-label {
       font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.4);
     }
 
     /* Philosophy / Band */
