@@ -5,6 +5,7 @@ date: 2026-04-10
 categories: [Education, Leadership, Jamaica]
 excerpt: "Discover how Farika Atkins is reshaping education leadership in Jamaica with a visionary and creative approach. Explore the impact of creative confidence in fostering innovation."
 author: ""
+---
 
 # Education Leadership in Jamaica: A Visionary Approach by Farika Atkins
 
