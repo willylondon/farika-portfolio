@@ -38,3 +38,5 @@ Coaching can help departments reach that consistency without flattening professi
 ## Leadership means creating conditions for better practice
 
 Good coaching is not surveillance. It is professional support with a clear instructional purpose. Leaders improve writing instruction when they create time for reflection, offer precise feedback, and keep the conversation tied to the student experience of writing in the classroom.
+
+For department leaders who want to deepen their coaching practice, these [instructional coaching books on Amazon](https://www.amazon.com/s?k=instructional+coaching+books+teachers&tag=lifestylehike-20) are a practical place to extend the conversation.

@@ -80,6 +80,8 @@ Professional development around writing should be practical enough that teachers
 - discussion of scaffolds that support students without reducing challenge
 - time for departments to agree on next steps
 
+For school leaders building a professional reading list, these [writing instruction and curriculum leadership books on Amazon](https://www.amazon.com/s?k=writing+instruction+books+teachers&tag=lifestylehike-20) are a useful starting point.
+
 Leaders should also think carefully about follow-through. One workshop rarely changes writing outcomes on its own. The strongest schools connect professional development to coaching, planning, moderation, and later review. That is how the work becomes embedded rather than forgotten.
 
 ## Create a writing culture students can feel
