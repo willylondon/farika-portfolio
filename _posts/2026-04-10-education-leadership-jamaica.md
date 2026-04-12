@@ -45,4 +45,4 @@ Farika Atkins' visionary approach to education leadership in Jamaica serves as a
 ## Internal Linking Opportunities
 1. [Farika Atkins' profile page](internal-link-1)
 2. [Importance of mentorship in education leadership](internal-link-2)
-3. [Tools and resources for aspiring education leaders in Jamaica](internal-link-3)
+3. [Tools and resources for aspiring education leaders in Jamaica](https://www.amazon.com/s?k=educational+leadership+books&tag=lifestylehike-20)

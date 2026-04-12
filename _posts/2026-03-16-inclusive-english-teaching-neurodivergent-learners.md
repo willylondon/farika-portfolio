@@ -37,3 +37,5 @@ Some of the most thoughtful students are not the quickest to raise a hand. Inclu
 It is a mistake to assume that inclusive teaching is soft teaching. Students still need strong texts, ambitious questions, and meaningful writing tasks. What changes is the level of intentional support. Teachers design pathways to success instead of assuming that all students will intuit the same route.
 
 In practice, inclusive teaching asks us to think carefully about what is essential to the learning and what is simply a habit we have inherited. That distinction helps departments become more equitable without losing academic rigor.
+
+For sensory tools and educational resources that support inclusive classrooms, [shop on Amazon](https://www.amazon.com/s?k=sensory+classroom+tools&tag=lifestylehike-20).
