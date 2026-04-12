@@ -1,4 +1,5 @@
 ---
+image: /assets/images/farika-blog-thumb.jpg
 layout: post
 title: "What inclusive English teaching looks like for neurodivergent learners"
 seo_title: "Inclusive English Teaching for Neurodivergent Learners | Farika Atkins"

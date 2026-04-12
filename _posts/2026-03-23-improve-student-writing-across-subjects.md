@@ -1,4 +1,5 @@
 ---
+image: /assets/images/farika-blog-thumb.jpg
 layout: post
 title: "How school leaders can improve student writing across subjects"
 seo_title: "Improve Student Writing Across Subjects | Farika Atkins"

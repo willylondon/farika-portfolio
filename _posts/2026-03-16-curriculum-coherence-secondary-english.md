@@ -1,4 +1,5 @@
 ---
+image: /assets/images/farika-blog-thumb.jpg
 layout: post
 title: "Building curriculum coherence across IMYC, IGCSE, and IBDP English"
 seo_title: "Curriculum Coherence Across IMYC, IGCSE, and IBDP English | Farika Atkins"

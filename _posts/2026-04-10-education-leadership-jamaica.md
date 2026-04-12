@@ -1,4 +1,5 @@
 ---
+image: /assets/images/farika-blog-thumb.jpg
 layout: post
 title: "Empowering Education Leadership in Jamaica: Farika Atkins' Visionary Approach"
 date: 2026-04-10

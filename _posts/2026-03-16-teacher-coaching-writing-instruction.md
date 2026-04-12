@@ -1,4 +1,5 @@
 ---
+image: /assets/images/farika-blog-thumb.jpg
 layout: post
 title: "Teacher coaching that improves writing instruction in secondary school"
 seo_title: "Teacher Coaching for Better Writing Instruction | Farika Atkins"

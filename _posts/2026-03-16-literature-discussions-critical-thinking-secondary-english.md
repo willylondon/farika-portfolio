@@ -1,4 +1,5 @@
 ---
+image: /assets/images/farika-blog-thumb.jpg
 layout: post
 title: "How literature discussions build critical thinking in secondary English"
 seo_title: "How Literature Discussions Build Critical Thinking in Secondary English | Farika Atkins"
