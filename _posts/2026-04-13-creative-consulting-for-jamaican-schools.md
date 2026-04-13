@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elevating Education in Jamaican Schools: The Power of Creative Consulting with Farika Atkins"
-date: 2026-04-10
+date: 2026-04-13
 categories: [Education, Innovation, Consulting]
 excerpt: "Discover how innovative creative consulting can revolutionize Jamaican school systems with expert insights from Farika Atkins."
 author: "Farika Atkins"
