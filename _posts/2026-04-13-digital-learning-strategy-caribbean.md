@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Crafting an Effective Digital Learning Strategy for the Caribbean"
-date: 2026-04-10
+date: 2026-04-13
 categories: [Digital Learning, Education, Caribbean]
 excerpt: "Explore how tailored digital learning strategies can revolutionize education in the Caribbean. Learn best practices and success stories."
 author: "Farika Atkins"
