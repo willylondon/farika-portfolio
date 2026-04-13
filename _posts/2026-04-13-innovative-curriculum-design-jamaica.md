@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Innovative Curriculum Design in Jamaica: Shaping the Future of Education"
-date: 2026-04-10
+date: 2026-04-13
 categories: [Education, Curriculum Design]
 excerpt: "Explore how innovative curriculum design in Jamaica is revolutionizing education to create a brighter future."
 author: "Your Name"
