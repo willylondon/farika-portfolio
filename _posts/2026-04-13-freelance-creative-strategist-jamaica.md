@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Unlocking Success: How to Thrive as a Freelance Creative Strategist in Jamaica"
-date: 2026-04-10
+date: 2026-04-13
 categories: [Freelancing, Creative Strategy, Jamaica]
 excerpt: "Discover essential tips and strategies to excel as a freelance creative strategist in Jamaica. Learn how to navigate the freelance market landscape and build a successful career!"
 author: "Your Name"
