@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elevating Education: Consulting Services for Schools in Jamaica"
-date: 2026-04-10
+date: 2026-04-13
 categories: [Education, Consulting, Jamaica]
 excerpt: "Discover how expert consulting services can transform Jamaican schools, improving curriculum, teacher training, and student engagement."
 author: "Your Name"
