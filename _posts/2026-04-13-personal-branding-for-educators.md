@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elevate Your Career: Personal Branding for Educators"
-date: 2026-04-10
+date: 2026-04-13
 categories: [Education, Career Growth, Personal Branding]
 excerpt: "Discover how educators can amplify their impact with a strong personal brand."
 author: "Your Name"
