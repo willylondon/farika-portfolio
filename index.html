@@ -645,7 +645,7 @@ layout: null
           <h2>Invite Farika to speak, train, or consult</h2>
           <p>Available for curriculum consulting, teacher development workshops, panel conversations, keynote speaking, and school leadership collaborations.</p>
           
-          <form action="https://formspree.io/f/placeholder_id" method="POST" class="contact-form">
+          <form id="contact-form" action="mailto:farikaatkins@gmail.com" method="POST" class="contact-form" data-recipient="farikaatkins@gmail.com" data-subject="Website speaking inquiry for Farika Atkins" novalidate>
             <div class="form-group">
               <label for="name">Full name</label>
               <input type="text" id="name" name="name" required>
@@ -668,6 +668,7 @@ layout: null
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
             <button type="submit" class="btn">Request an Engagement</button>
+            <p id="contact-form-status" style="margin-top: 12px; color: var(--accent);"></p>
           </form>
         </div>
         
@@ -714,5 +715,45 @@ layout: null
     </svg>
   </a>
 
+  <script>
+    (function () {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('contact-form-status');
+      if (!form) return;
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const engagement = document.getElementById('engagement');
+        const message = document.getElementById('message');
+
+        if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+          if (status) {
+            status.textContent = 'Please complete your name, email, and message before sending.';
+          }
+          return;
+        }
+
+        const recipient = form.dataset.recipient || 'farikaatkins@gmail.com';
+        const subject = form.dataset.subject || 'Website inquiry for Farika Atkins';
+        const body = [
+          'Full name: ' + name.value.trim(),
+          'Email address: ' + email.value.trim(),
+          'Type of engagement: ' + engagement.value,
+          '',
+          'Message:',
+          message.value.trim()
+        ].join('\n');
+
+        window.location.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+        if (status) {
+          status.innerHTML = 'Your email app should open now. If it does not, email <a href="mailto:farikaatkins@gmail.com" style="color: inherit; text-decoration: underline;">farikaatkins@gmail.com</a> directly.';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
