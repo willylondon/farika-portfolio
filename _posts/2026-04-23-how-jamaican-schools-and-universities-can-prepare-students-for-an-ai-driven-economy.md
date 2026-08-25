@@ -6,6 +6,7 @@ categories: [Education, Technology]
 excerpt: A practical guide for Jamaican educational institutions to equip students for the evolving demands of an AI-driven workforce.
 image: "https://images.unsplash.com/photo-1659416071137-1b0e73ce261f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI1NDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY5NzA4MTJ8&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "a building with a clock tower"
+description: "A practical guide for Jamaican educational institutions to equip students for the evolving demands of an AI-driven workforce."
 ---
 
 Artificial Intelligence (AI) is revolutionizing industries worldwide, reshaping the nature of work, and creating new opportunities. As we move towards an AI-driven economy, it is essential for Jamaican schools and universities to adapt their educational strategies to ensure students are well-prepared for the future. In this comprehensive guide, we will explore practical ways in which Farika Atkins audiences can take proactive steps to equip Jamaican students for success in an AI-driven world.

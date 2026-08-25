@@ -5,6 +5,7 @@ date: 2026-04-13
 categories: [Education, Career Growth, Personal Branding]
 excerpt: "Discover how educators can amplify their impact with a strong personal brand."
 author: "Your Name"
+description: "Discover how educators can amplify their impact with a strong personal brand."
 ---
 
 # How Educators Can Elevate Their Careers through Personal Branding

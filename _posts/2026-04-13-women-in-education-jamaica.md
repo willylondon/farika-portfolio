@@ -5,6 +5,7 @@ date: 2026-04-13
 categories: [Education, Empowerment, Jamaica]
 excerpt: "Explore the impactful roles of women educators in Jamaica and their contribution to shaping future generations."
 author: "Farika Atkins"
+description: "Explore the impactful roles of women educators in Jamaica and their contribution to shaping future generations."
 ---
 
 

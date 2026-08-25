@@ -3,6 +3,8 @@ description: "English education leader, curriculum strategist, and speaker helpi
 url: "https://www.farikaatkins.online"
 timezone: "America/Jamaica"
 permalink: /blog/:title.html
+plugins:
+  - jekyll-redirect-from
 markdown: kramdown
 kramdown:
   input: GFM

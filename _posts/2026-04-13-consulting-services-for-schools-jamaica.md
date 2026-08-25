@@ -5,6 +5,7 @@ date: 2026-04-13
 categories: [Education, Consulting, Jamaica]
 excerpt: "Discover how expert consulting services can transform Jamaican schools, improving curriculum, teacher training, and student engagement."
 author: "Your Name"
+description: "Discover how expert consulting services can transform Jamaican schools, improving curriculum, teacher training, and student engagement."
 ---
 
 # Consulting Services for Schools in Jamaica: Elevating Education with Expert Support

@@ -11,10 +11,11 @@
   <meta property="og:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}" />
   <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:image" content="{{ site.url }}/farika.png" />
+  <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/farika.webp{% endif %}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}" />
   <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/farika.webp{% endif %}" />
   
   <script type="application/ld+json">
   {
@@ -106,6 +107,8 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--text-muted);
+      display: inline-block;
+      padding: 8px 0;
     }
     .nav-link:hover { color: var(--text-main); }
     .btn {

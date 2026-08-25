@@ -6,6 +6,7 @@ categories: Education
 excerpt: Explore practical inclusive teaching strategies tailored for neurodivergent learners in Jamaica.
 image: "https://images.unsplash.com/photo-1621953571257-4a6112891214?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI1NDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYwNDI4MTB8&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "smiling woman in pink and blue tank top near body of water during daytime"
+description: "Explore practical inclusive teaching strategies tailored for neurodivergent learners in Jamaica."
 ---
 
 # Inclusive Teaching Strategies for Neurodivergent Learners in Jamaica

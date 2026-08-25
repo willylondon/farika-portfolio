@@ -5,7 +5,7 @@ date: 2026-04-13
 categories: [Education, Innovation, Consulting]
 excerpt: "Discover how innovative creative consulting can revolutionize Jamaican school systems with expert insights from Farika Atkins."
 author: "Farika Atkins"
-
+description: "Discover how innovative creative consulting can revolutionize Jamaican school systems with expert insights from Farika Atkins."
 ---
 
 # Creative Consulting for Jamaican Schools: Elevating Education Through Innovation

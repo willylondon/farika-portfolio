@@ -5,6 +5,7 @@ date: 2026-04-13
 categories: [Education, Curriculum Design]
 excerpt: "Explore how innovative curriculum design in Jamaica is revolutionizing education to create a brighter future."
 author: "Your Name"
+description: "Explore how innovative curriculum design in Jamaica is revolutionizing education to create a brighter future."
 ---
 
 In today's ever-evolving educational landscape, the role of curriculum design cannot be understated. Particularly in Jamaica, a wave of innovative curriculum design practices is reshaping the way students learn and educators teach. This post delves into the realm of innovative curriculum design in Jamaica, highlighting its significance and showcasing real-world examples of its impact.
