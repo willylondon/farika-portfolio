@@ -4,17 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}</title>
-  <meta name="description" content="{{ page.description }}" />
+  {% assign meta_description = page.description | default: page.excerpt | strip_html | strip_newlines %}
+  <meta name="description" content="{{ meta_description }}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}" />
-  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ meta_description }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/farika.webp{% endif %}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | Farika Atkins{% endif %}" />
-  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:description" content="{{ meta_description }}" />
   <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/farika.webp{% endif %}" />
   
   <script type="application/ld+json">
@@ -32,21 +33,21 @@
       "@type": "Person",
       "name": "Farika Atkins"
     },
-    "description": {{ page.description | jsonify }},
+    "description": {{ meta_description | jsonify }},
     "url": "{{ site.url }}{{ page.url }}"
   }
   </script>
 
   <style>
     :root {
-      --bg: #f9f7f2;
-      --text-main: #1c1c1a;
-      --text-muted: #6b6860;
-      --accent: #9a8f6e;
-      --section-dark: #1c1c1a;
-      --card-warm: #ede9df;
-      --hero-panel: #e6e0d2;
-      --stat-strip: #ddd8c8;
+      --bg: #fbf9f4;
+      --text-main: #17151a;
+      --text-muted: #625e64;
+      --accent: #b18a3f;
+      --section-dark: #2c0d47;
+      --card-warm: #f2ede3;
+      --hero-panel: #eee8dc;
+      --stat-strip: #e2dac9;
       
       --font-serif: Georgia, serif;
       --font-sans: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, sans-serif;
@@ -192,8 +193,8 @@
     <div class="container flex justify-between items-center">
       <a href="{{ '/' | relative_url }}" class="brand">Farika Atkins</a>
       <nav class="nav-links">
-        <a href="{{ '/index.html#about' | relative_url }}" class="nav-link">About</a>
-        <a href="{{ '/index.html#expertise' | relative_url }}" class="nav-link">Expertise</a>
+        <a href="{{ '/index.html#leadership' | relative_url }}" class="nav-link">Leadership</a>
+        <a href="{{ '/index.html#workshop' | relative_url }}" class="nav-link">Workshops</a>
         <a href="{{ '/blog.html' | relative_url }}" class="nav-link">Insights</a>
         <a href="{{ '/index.html#contact' | relative_url }}" class="nav-link">Speaking</a>
       </nav>
@@ -204,7 +205,7 @@
   <main class="post-container">
     <div class="post-topbar"><a href="{{ '/blog.html' | relative_url }}">&larr; Back to the blog</a></div>
     <article>
-      <div class="post-eyebrow">{{ page.category }}</div>
+      <div class="post-eyebrow">{% if page.category %}{{ page.category }}{% elsif page.categories %}{{ page.categories | first }}{% endif %}</div>
       <h1 class="post-title">{{ page.title }}</h1>
       <div class="post-meta">By Farika Atkins | {{ page.date | date: "%B %-d, %Y" }}</div>
       
@@ -215,7 +216,11 @@
       <div class="post-body">
         {{ content }}
       </div>
+      {% if content contains 'amazon.com' %}
+      {% unless content contains 'Amazon Associate' %}
       <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 2em; padding-top: 1em; border-top: 1px solid rgba(0,0,0,0.08);"><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Links may be affiliate links that support this site at no extra cost to you.</p>
+      {% endunless %}
+      {% endif %}
 
       {% if page.callout_title or page.callout_text %}
       <div class="callout">
@@ -230,7 +235,7 @@
     <div class="container footer-inner">
       <div class="footer-copy">&copy; 2026 Farika Atkins. All rights reserved.</div>
       <div class="footer-links">
-        <a href="{{ '/index.html#about' | relative_url }}" class="nav-link">About</a>
+        <a href="{{ '/index.html#leadership' | relative_url }}" class="nav-link">Leadership</a>
         <a href="{{ '/blog.html' | relative_url }}" class="nav-link">Blog</a>
         <a href="{{ '/index.html#contact' | relative_url }}" class="nav-link">Contact</a>
       </div>

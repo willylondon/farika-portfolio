@@ -11,7 +11,7 @@ Publish thought-leadership articles that strengthen Farika Atkins' professional 
 - International school leadership
 
 ## Publishing Steps
-1. Create the article in Sveltia CMS or add a markdown file to [`_posts`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/_posts).
+1. Create the article in Sveltia CMS or add a markdown file to [`_posts`](_posts).
 2. Use a dated filename in this format: `YYYY-MM-DD-keyword-rich-slug.md`.
 3. Fill in the frontmatter fields:
    - `title`
@@ -27,10 +27,10 @@ Publish thought-leadership articles that strengthen Farika Atkins' professional 
 5. Push to `main`.
 
 ## What Updates Automatically
-- [`blog.html`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/blog.html)
-- recent posts section in [`index.html`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/index.html)
-- [`sitemap.xml`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/sitemap.xml)
-- [`rss.xml`](/Users/willardwells/Documents/SEO%20Master/farika-portfolio-repo/rss.xml)
+- [`blog.html`](blog.html)
+- the homepage insight list is curated separately so only the strongest, most relevant articles are featured
+- [`sitemap.xml`](sitemap.xml)
+- [`rss.xml`](rss.xml)
 
 ## SEO Checklist
 - Primary keyword in title

@@ -118,10 +118,11 @@ layout: null
     .workshop-meta div { display: grid; grid-template-columns: 100px 1fr; gap: 20px; padding: 13px 0; border-bottom: 1px solid var(--white-line); }
     .workshop-meta dt { color: var(--gold-soft); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .workshop-meta dd { margin: 0; font-family: var(--serif); font-size: .96rem; }
-    .video-frame { margin: 0; border: 1px solid var(--gold); background: #08060b; box-shadow: 28px 28px 0 rgba(177,138,63,.08); }
+    .workshop-label { margin-bottom: 18px; color: var(--gold-soft); font-size: .67rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .workshop-frame, .video-frame { margin: 0; border: 1px solid var(--gold); background: #08060b; box-shadow: 28px 28px 0 rgba(177,138,63,.08); }
+    .workshop-frame img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
     .video-frame video { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #08060b; }
-    .video-frame figcaption, .photo-card figcaption { color: rgba(255,255,255,.6); font-size: .72rem; line-height: 1.55; }
-    .video-frame figcaption { padding: 12px 14px; }
+    .workshop-frame figcaption, .video-frame figcaption { color: rgba(255,255,255,.6); font-size: .72rem; line-height: 1.55; padding: 12px 14px; }
     .focus-rail { display: grid; grid-template-columns: repeat(3, 1fr); margin: 72px 0; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); }
     .focus-item { display: grid; grid-template-columns: 58px 1fr; gap: 18px; padding: 30px 32px; border-right: 1px solid var(--white-line); }
     .focus-item:first-child { padding-left: 0; }
@@ -129,12 +130,12 @@ layout: null
     .focus-number { color: var(--gold); font-family: var(--serif); font-size: 2.4rem; line-height: 1; }
     .focus-item h3 { margin: 0 0 7px; color: #fff; font-family: var(--sans); font-size: .98rem; font-weight: 650; }
     .focus-item p { margin: 0; color: rgba(255,255,255,.58); font-size: .78rem; line-height: 1.55; }
-    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-    .photo-card { margin: 0; }
-    .photo-card img { display: block; width: 100%; height: clamp(400px, 42vw, 560px); object-fit: cover; border: 1px solid var(--gold); }
-    .photo-card:first-child img { object-position: center 34%; }
-    .photo-card:last-child img { object-position: center 28%; }
-    .photo-card figcaption { max-width: 620px; padding-top: 14px; }
+    .workshop-archive { display: grid; grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr); gap: clamp(48px, 7vw, 96px); align-items: center; margin-top: 88px; padding-top: 72px; border-top: 1px solid var(--white-line); }
+    .workshop-archive h3 { margin-bottom: 22px; color: #fff; font-size: clamp(2.1rem, 3.7vw, 3.5rem); line-height: 1.08; }
+    .workshop-archive-copy > p { margin-bottom: 28px; color: rgba(255,255,255,.68); font-size: .91rem; line-height: 1.75; }
+    .workshop-outcomes { display: grid; gap: 10px; margin: 0; padding: 0; color: rgba(255,255,255,.78); font-size: .79rem; list-style: none; }
+    .workshop-outcomes li { position: relative; padding-left: 20px; }
+    .workshop-outcomes li::before { position: absolute; left: 0; color: var(--gold); content: "—"; }
 
     .insights-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 44px; }
     .insights-heading h2 { max-width: 700px; margin: 0; font-size: clamp(3rem, 5.5vw, 5.2rem); }
@@ -177,8 +178,9 @@ layout: null
       .leadership-item:nth-child(n) { padding: 28px 28px 24px 0; border-right: 1px solid var(--line); }
       .leadership-item:nth-child(even) { padding-left: 28px; border-right: 0; }
       .workshop-opening { grid-template-columns: 1fr; }
-      .video-frame { max-width: 860px; }
+      .workshop-frame, .video-frame { max-width: 860px; }
       .focus-item { grid-template-columns: 44px 1fr; padding-inline: 24px; }
+      .workshop-archive { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
@@ -201,12 +203,14 @@ layout: null
       .leadership-item:nth-child(n) { min-height: 0; padding: 26px 0; border-right: 0; }
       .workshop .section { padding: 82px 0 76px; }
       .workshop h2 { font-size: clamp(3rem, 14vw, 4.3rem); }
-      .video-frame { box-shadow: 14px 14px 0 rgba(177,138,63,.08); }
+      .workshop-copy, .workshop-frame, .workshop-archive, .video-frame { min-width: 0; }
+      .workshop-meta div { grid-template-columns: 74px minmax(0, 1fr); gap: 14px; }
+      .workshop-meta dd { overflow-wrap: anywhere; }
+      .workshop-frame, .video-frame { box-shadow: 14px 14px 0 rgba(177,138,63,.08); }
       .focus-rail { grid-template-columns: 1fr; margin: 58px 0; }
       .focus-item, .focus-item:first-child, .focus-item:last-child { padding: 24px 0; border-right: 0; border-bottom: 1px solid var(--white-line); }
       .focus-item:last-child { border-bottom: 0; }
-      .photo-pair { grid-template-columns: 1fr; gap: 44px; }
-      .photo-card img { height: 430px; }
+      .workshop-archive { margin-top: 64px; padding-top: 56px; }
       .insights-heading { align-items: start; flex-direction: column; }
       .article-row { grid-template-columns: 1fr auto; gap: 12px 20px; padding: 26px 0; }
       .article-meta { grid-column: 1 / -1; }
@@ -267,24 +271,33 @@ layout: null
       <div class="container section">
         <div class="workshop-opening">
           <div class="workshop-copy">
-            <h2 id="workshop-title" class="display">From setup to confident daily use.</h2>
-            <p>At Hillel Academy, Farika facilitated a hands-on new-teacher workshop spanning Google Classroom and Rediker TeacherPlus Gradebook. Participants built and organised classes, tested assignments from a student’s point of view, practised feedback and return, and worked through accurate gradebook setup and reporting.</p>
-            <dl class="workshop-meta"><div><dt>Location</dt><dd>Hillel Academy</dd></div><div><dt>Format</dt><dd>Live, step-by-step teacher workshop</dd></div><div><dt>Focus</dt><dd>Google Classroom + Rediker Gradebook</dd></div></dl>
+            <div class="workshop-label">Featured professional learning</div>
+            <h2 id="workshop-title" class="display">Principled teaching. Elevated practice.</h2>
+            <p>Farika led an interactive exploration of Domain 4 of the Danielson Framework, presenting it as more than an evaluation tool—as a roadmap, a shared professional language, a catalyst for growth and a reminder of educators’ common purpose. Through discussion, real-life scenarios and guided reflection, participants examined how teachers collaborate, continue developing, exercise professional judgement and make intentional decisions that serve students well.</p>
+            <dl class="workshop-meta"><div><dt>Date</dt><dd>August 28, 2026</dd></div><div><dt>Format</dt><dd>Interactive professional-learning workshop</dd></div><div><dt>Focus</dt><dd>Danielson Framework · Domain 4</dd></div></dl>
+          </div>
+          <figure class="workshop-frame">
+            <img src="assets/media/farika-danielson-domain-4-workshop.webp" alt="Farika Atkins facilitating a workshop on Domain 4 of the Danielson Framework with educators" width="1600" height="900" loading="lazy" decoding="async" />
+            <figcaption>Farika facilitates a discussion on Domain 4 and principled teaching during the August 28 professional-learning workshop.</figcaption>
+          </figure>
+        </div>
+        <div class="focus-rail" aria-label="Principled teaching learning sequence">
+          <article class="focus-item"><span class="focus-number">01</span><div><h3>Reflect</h3><p>Examine professional practice with honesty, evidence and purpose.</p></div></article>
+          <article class="focus-item"><span class="focus-number">02</span><div><h3>Grow</h3><p>Strengthen practice through collaboration and continued development.</p></div></article>
+          <article class="focus-item"><span class="focus-number">03</span><div><h3>Serve</h3><p>Exercise sound judgement and act in students’ best interests.</p></div></article>
+        </div>
+        <article class="workshop-archive" aria-labelledby="digital-workshop-title">
+          <div class="workshop-archive-copy">
+            <div class="workshop-label">Workshop case study</div>
+            <h3 id="digital-workshop-title">From setup to confident daily use.</h3>
+            <p>At Hillel Academy, Farika facilitated a hands-on new-teacher workshop spanning Google Classroom and Rediker TeacherPlus Gradebook. Participants moved through the complete workflow from class setup to accurate reporting.</p>
+            <ul class="workshop-outcomes"><li>Build and organise clear digital classrooms</li><li>Test assignments from a student’s point of view</li><li>Practise feedback, return and gradebook reporting</li></ul>
           </div>
           <figure class="video-frame">
             <video controls playsinline preload="metadata" poster="assets/media/farika-hillel-workshop-video-poster.webp"><source src="assets/media/hillel-google-classroom-workshop.mp4" type="video/mp4" />Your browser does not support embedded video.</video>
             <figcaption>Farika leads teachers through a live Google Classroom workflow. Participant information has been softened for privacy.</figcaption>
           </figure>
-        </div>
-        <div class="focus-rail" aria-label="Workshop learning sequence">
-          <article class="focus-item"><span class="focus-number">01</span><div><h3>Build &amp; organise</h3><p>Create and structure classes, set up materials, and align settings for a smooth start.</p></div></article>
-          <article class="focus-item"><span class="focus-number">02</span><div><h3>Teach &amp; test</h3><p>Experience assignments as students, submit work, and practise giving feedback.</p></div></article>
-          <article class="focus-item"><span class="focus-number">03</span><div><h3>Close the loop</h3><p>Return work, monitor progress and generate accurate gradebook reports.</p></div></article>
-        </div>
-        <div class="photo-pair">
-          <figure class="photo-card"><img src="assets/media/farika-hillel-workshop-demonstration.webp" alt="Farika Atkins introducing the workshop process at Hillel Academy" width="1122" height="1402" /><figcaption>Farika introduces the session goals and workshop flow, setting clear expectations for hands-on practice.</figcaption></figure>
-          <figure class="photo-card"><img src="assets/media/farika-hillel-workshop-facilitating.webp" alt="Farika Atkins facilitating Google Classroom practice with teachers at Hillel Academy" width="1122" height="1402" /><figcaption>Teachers work directly in Google Classroom as Farika models the workflow and responds to questions in real time.</figcaption></figure>
-        </div>
+        </article>
       </div>
     </section>
 
