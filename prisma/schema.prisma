@@ -1,0 +1,118 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Programme {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String   @unique
+  tagline     String
+  description String
+  ageRange    String
+  examBoard   String   @default("")
+  icon        String   @default("BookOpen")
+  color       String   @default("blue")
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  classes     Class[]
+}
+
+model Class {
+  id            String    @id @default(uuid())
+  programmeId   String
+  programme     Programme @relation(fields: [programmeId], references: [id])
+  title         String
+  description   String
+  dayOfWeek     String
+  startTime     String
+  endTime       String
+  capacity      Int
+  enrolledCount Int       @default(0)
+  priceJMD      Int
+  isActive      Boolean   @default(true)
+  term          String    @default("Michaelmas 2026")
+  startDate     String    @default("")
+  endDate       String    @default("")
+  meetingLink   String    @default("")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  bookings      Booking[]
+}
+
+model Booking {
+  id                 String    @id @default(uuid())
+  classId            String
+  class              Class     @relation(fields: [classId], references: [id])
+  studentName        String
+  studentGrade       String
+  studentSchool      String    @default("")
+  parentName         String
+  parentEmail        String
+  parentPhone        String
+  status             String    @default("PENDING_PAYMENT")
+  receiptPath        String?
+  receiptFilename    String?
+  receiptUploadedAt  DateTime?
+  confirmedAt        DateTime?
+  rejectedAt         DateTime?
+  referenceNumber    String    @unique
+  notes              String    @default("")
+  expiresAt          DateTime
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+}
+
+model Testimonial {
+  id          String   @id @default(uuid())
+  parentName  String
+  studentGrade String  @default("")
+  programme   String
+  rating      Int      @default(5)
+  content     String
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BlogPost {
+  id              String    @id @default(uuid())
+  title           String
+  slug            String    @unique
+  excerpt         String
+  content         String
+  coverImage      String    @default("")
+  metaDescription String    @default("")
+  tags            String    @default("")
+  isPublished     Boolean   @default(false)
+  publishedAt     DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model AdminUser {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model ContactMessage {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String   @default("")
+  subject   String   @default("")
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
