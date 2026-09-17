@@ -49,7 +49,7 @@ export function getSeatUrgency(remaining: number): 'available' | 'low' | 'full' 
 }
 
 const slugToColorMap: Record<string, string> = {
-  'pep-language-arts': 'green',
+  'csec-english-b': 'emerald',
   'csec-english-a': 'blue',
   'igcse-english-language': 'purple',
   'ib-english': 'red',
@@ -65,6 +65,12 @@ export function getProgrammeColor(colorOrSlug: string): {
 } {
   const resolvedColor = slugToColorMap[colorOrSlug] || colorOrSlug;
   const colors: Record<string, { bg: string; text: string; badge: string; border: string }> = {
+    emerald: {
+      bg: 'bg-emerald-50',
+      text: 'text-emerald-700',
+      badge: 'bg-emerald-100 text-emerald-800',
+      border: 'border-emerald-500',
+    },
     green: {
       bg: 'bg-green-50',
       text: 'text-green-700',
@@ -139,29 +145,29 @@ export interface ProgrammeInfo {
 
 export const PROGRAMME_DATA: readonly ProgrammeInfo[] = [
   {
-    slug: 'pep-language-arts',
-    name: 'PEP Language Arts',
-    tagline: 'Build a strong foundation for the Primary Exit Profile',
-    examBoard: 'Ministry of Education, Jamaica',
-    ageRange: 'Grades 4–6 (Ages 9–12)',
-    color: 'green',
-    icon: 'GraduationCap',
-    description: `The Primary Exit Profile (PEP) determines your child's placement into Jamaica's top traditional high schools. Our PEP Language Arts programme covers all three components — the Ability Test, the Curriculum-Based Test (CBT), and Performance Tasks — with expert guidance from teachers who understand the marking scheme.\n\nWe focus on building the critical thinking, reading comprehension, and writing skills that the PEP assessments demand. Students work through real past-paper-style questions, develop strong vocabulary, and master the structured composition format required for top scores.`,
+    slug: 'csec-english-b',
+    name: 'CSEC English B (Literature)',
+    tagline: 'Excel in Drama, Poetry, Prose, and Literary Analysis',
+    examBoard: 'Caribbean Examinations Council (CXC)',
+    ageRange: 'Grades 10–11 (Ages 14–17)',
+    color: 'emerald',
+    icon: 'BookOpen',
+    description: `Our CSEC English B programme provides comprehensive, text-specific preparation across Drama (Shakespeare and Modern Drama), Poetry (the 20 CXC prescribed poems), and Prose (West Indian and World literature).\n\nStudents learn how to conduct incisive textual analysis, track thematic developments, unpack poetic and dramatic devices, compare poems and prose extracts effectively, and structure sophisticated, high-scoring essays under examination conditions.`,
     curriculum: [
-      'Ability Test verbal reasoning and analogies',
-      'CBT reading comprehension and inference',
-      'Grammar, punctuation, and vocabulary building',
-      'Structured composition writing',
-      'Performance Task analysis and response',
-      'Past paper practice with examiner-level feedback',
+      'Drama Analysis: Shakespeare and 20th-Century West Indian drama',
+      'Poetry Dissection: Themes, poetic devices, tone, and comparison',
+      'Prose Fiction: Character motivation, plot structure, and symbolism',
+      'Comparative Essay Technique: Structuring dual-text responses',
+      'Close textual quotation and sustained critical evaluation',
+      'Past paper essay workshops with examiner-calibrated marking',
     ],
     features: [
-      'Ability Test verbal reasoning and analogies',
-      'CBT reading comprehension and inference',
-      'Grammar, punctuation, and vocabulary building',
-      'Structured composition writing',
-      'Performance Task analysis and response',
-      'Past paper practice with examiner-level feedback',
+      'Drama Analysis: Shakespeare and 20th-Century West Indian drama',
+      'Poetry Dissection: Themes, poetic devices, tone, and comparison',
+      'Prose Fiction: Character motivation, plot structure, and symbolism',
+      'Comparative Essay Technique: Structuring dual-text responses',
+      'Close textual quotation and sustained critical evaluation',
+      'Past paper essay workshops with examiner-calibrated marking',
     ],
   },
   {
@@ -273,10 +279,10 @@ export const PROGRAMME_DATA: readonly ProgrammeInfo[] = [
     name: 'Comprehension Skills',
     tagline: 'Read critically, think deeply, answer precisely',
     examBoard: 'All Levels',
-    ageRange: 'Grades 4–13 (Ages 9–19)',
+    ageRange: 'Grades 7–13 (Ages 12–19)',
     color: 'teal',
     icon: 'Search',
-    description: `Comprehension is the foundation of every English exam. Our programme develops students' ability to read critically, identify main ideas, make inferences, analyse author purpose, and construct precise written responses.\n\nUsing texts from a wide range of genres and difficulty levels, students build the reading stamina and analytical skills needed for PEP, CSEC, IGCSE, and IB examinations. Every session includes timed practice with mark-scheme-aligned feedback.`,
+    description: `Comprehension is the foundation of every English exam. Our programme develops students' ability to read critically, identify main ideas, make inferences, analyse author purpose, and construct precise written responses.\n\nUsing texts from a wide range of genres and difficulty levels, students build the reading stamina and analytical skills needed for CSEC, CAPE, IGCSE, and IB examinations. Every session includes timed practice with mark-scheme-aligned feedback.`,
     curriculum: [
       'Literal comprehension: fact-finding and recall',
       'Inferential comprehension: reading between the lines',

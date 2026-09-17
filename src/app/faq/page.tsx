@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: "What programmes do you offer?",
-    answer: "We offer comprehensive tutoring for PEP, CSEC English A & B, IGCSE First Language English, IB English A, Essay Writing workshops, and Comprehension skills building."
+    answer: "We offer comprehensive tutoring for CSEC English A, CSEC English B (Literature in English), IGCSE First Language English, IB English A (Literature and Language & Literature), Advanced Essay Writing workshops, and Analytical Comprehension skills building."
   },
   {
     question: "How large are the classes?",

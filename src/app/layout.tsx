@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     default: 'The English Language | Expert English & Language Arts Tutoring in Jamaica',
   },
   description:
-    'Expert English & Language Arts tutoring in Jamaica. Specializing in PEP Language Arts, CSEC English A, IGCSE English Language, and IB English preparation with small group classes and one-on-one lessons.',
+    'Expert English Language & Literature tutoring in Jamaica. Specializing in CSEC English A, CSEC English B (Literature), IGCSE First Language, and IB English preparation with small group classes and one-on-one lessons.',
   keywords: [
     'English tutoring Jamaica',
-    'PEP preparation',
-    'PEP Language Arts',
+    'Literature tutoring Jamaica',
+    'CSEC English B Literature',
     'CSEC English lessons',
     'CSEC English A tutor',
     'IGCSE English tutor Jamaica',
@@ -21,21 +21,21 @@ export const metadata: Metadata = {
     'English extra lessons Kingston',
     'Language Arts tutor Jamaica',
     'CXC English tutoring',
-    'PEP Ability Test preparation',
+    'CXC Literature exam preparation',
   ],
   openGraph: {
     type: 'website',
     locale: 'en_JM',
     siteName: 'The English Language',
-    title: 'The English Language | Expert English & Language Arts Tutoring in Jamaica',
+    title: 'The English Language | Expert English & Literature Tutoring in Jamaica',
     description:
-      'Expert English & Language Arts tutoring. PEP, CSEC English A, IGCSE, IB. Small group classes with exam-focused expertise.',
+      'Expert English & Literature tutoring. CSEC English A & B, IGCSE, IB. Small group classes with exam-focused expertise.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The English Language | Expert English Tutoring in Jamaica',
+    title: 'The English Language | Expert English & Literature Tutoring in Jamaica',
     description:
-      'PEP, CSEC, IGCSE, IB English tutoring. Small groups. Exam-focused. Online lessons.',
+      'CSEC English A & B, IGCSE, IB English tutoring. Small groups. Exam-focused. Online lessons.',
   },
   robots: {
     index: true,
@@ -53,7 +53,7 @@ export default function RootLayout({
     '@type': 'EducationalOrganization',
     name: 'The English Language',
     description:
-      'Expert English & Language Arts tutoring in Jamaica. PEP, CSEC English A, IGCSE English Language, and IB English preparation.',
+      'Expert English Language & Literature tutoring in Jamaica. CSEC English A, CSEC English B (Literature), IGCSE English Language, and IB English preparation.',
     url: process.env.SITE_URL || 'https://theenglishlanguage.com',
     address: {
       '@type': 'PostalAddress',
@@ -66,9 +66,9 @@ export default function RootLayout({
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'English & Language Arts Programmes',
+      name: 'English & Literature Programmes',
       itemListElement: [
-        { '@type': 'Course', name: 'PEP Language Arts Preparation' },
+        { '@type': 'Course', name: 'CSEC English B (Literature)' },
         { '@type': 'Course', name: 'CSEC English A' },
         { '@type': 'Course', name: 'IGCSE English Language' },
         { '@type': 'Course', name: 'IB English' },

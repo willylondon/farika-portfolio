@@ -44,14 +44,14 @@ export default function AboutPage() {
                 &ldquo;My work centers on rigorous instruction, inclusive practice, and long-term student growth. Whether preparing a student for high-stakes examinations or cultivating lifelong reading and composition skills, I believe in structured guidance combined with personal encouragement.&rdquo;
               </p>
               <p className="text-base text-slate-600">
-                With deep expertise spanning Jamaica&apos;s Ministry of Education curricula (PEP, CSEC, CAPE) as well as international frameworks (Cambridge IGCSE and IB Diploma), Farika partners with students and parents to build confidence, critical thinking, and exam mastery.
+                With deep expertise spanning CXC regional examinations (CSEC English A, CSEC English B Literature, CAPE Literatures in English) as well as international frameworks (Cambridge IGCSE and IB Diploma), Farika partners with students and parents to build confidence, analytical depth, and exam mastery.
               </p>
             </div>
             
             <div className="mt-8">
               <h3 className="font-semibold text-slate-900 mb-4">Areas of Expertise</h3>
               <div className="flex flex-wrap gap-2">
-                {['PEP Language Arts', 'CSEC English A', 'IGCSE First Language', 'IB English A', 'Essay Writing & SBA', 'Comprehension & Analysis'].map(spec => (
+                {['CSEC English B (Literature)', 'CSEC English A', 'CAPE Literatures in English', 'IGCSE First Language', 'IB English A (Lit & Lang/Lit)', 'Essay Writing & SBA Coaching', 'Textual Analysis & Comprehension'].map(spec => (
                   <span key={spec} className="badge bg-blue-50 text-blue-700 border border-blue-200">
                     {spec}
                   </span>

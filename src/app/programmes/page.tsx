@@ -5,7 +5,7 @@ import { PROGRAMME_DATA, getProgrammeColor, cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Our Programmes',
-  description: 'Comprehensive English tutoring from primary to sixth form in Jamaica. PEP, CSEC, IGCSE, and IB preparation.',
+  description: 'Comprehensive English & Literature tutoring in Jamaica. CSEC English A & B (Literature), IGCSE, and IB English preparation.',
 };
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -24,7 +24,7 @@ export default function ProgrammesPage() {
         <div className="container-main text-center">
           <h1 className="heading-1 font-serif text-white mb-4">Our Programmes</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Comprehensive English and Language Arts tutoring from primary to sixth form, designed to build confidence and mastery.
+            Rigorous English Language and Literature tutoring for secondary and pre-university students, designed to build confidence, analytical depth, and exam mastery.
           </p>
         </div>
       </div>

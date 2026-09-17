@@ -25,14 +25,14 @@ async function main() {
   // ── Programmes ──────────────────────────────────────────
   const programmesData = [
     {
-      name: 'PEP Language Arts',
-      slug: 'pep-language-arts',
-      tagline: 'Build a strong foundation for the Primary Exit Profile',
-      description: 'The Primary Exit Profile (PEP) determines your child\'s placement into Jamaica\'s top traditional high schools. Our PEP Language Arts programme covers all three components — the Ability Test, the Curriculum-Based Test (CBT), and Performance Tasks — with expert guidance from teachers who understand the marking scheme.',
-      ageRange: 'Grades 4–6 (Ages 9–12)',
-      examBoard: 'Ministry of Education, Jamaica',
-      icon: 'GraduationCap',
-      color: 'green',
+      name: 'CSEC English B (Literature)',
+      slug: 'csec-english-b',
+      tagline: 'Excel in Drama, Poetry, Prose, and Literary Analysis',
+      description: 'Our CSEC English B programme provides comprehensive, text-specific preparation across Drama (Shakespeare and Modern Drama), Poetry (the 20 CXC prescribed poems), and Prose (West Indian and World literature). Students develop nuanced close-reading skills and master comparative essay structuring for top CXC grades.',
+      ageRange: 'Grades 10–11 (Ages 14–17)',
+      examBoard: 'Caribbean Examinations Council (CXC)',
+      icon: 'BookOpen',
+      color: 'emerald',
       order: 1,
     },
     {
@@ -105,41 +105,41 @@ async function main() {
 
   // ── Classes ─────────────────────────────────────────────
   const classesData = [
-    // PEP Classes
+    // CSEC English B (Literature) Classes
     {
-      programmeSlug: 'pep-language-arts',
-      title: 'Grade 6 PEP Ability Test Prep',
-      description: 'Intensive verbal reasoning and analytical skills preparation for the PEP Ability Test. Build the cognitive skills needed for top-band performance.',
-      dayOfWeek: 'Saturday',
-      startTime: '09:00',
-      endTime: '10:30',
+      programmeSlug: 'csec-english-b',
+      title: 'CSEC English B: Drama & Shakespeare Masterclass',
+      description: 'Close textual analysis of prescribed Shakespearean and modern West Indian drama. Learn scene dissection, dramatic conventions, and character motivation.',
+      dayOfWeek: 'Tuesday',
+      startTime: '17:00',
+      endTime: '18:30',
+      capacity: 8,
+      enrolledCount: 4,
+      priceJMD: 4200,
+      term: 'Michaelmas 2026',
+    },
+    {
+      programmeSlug: 'csec-english-b',
+      title: 'CSEC English B: Poetry Workshop (The 20 Poems)',
+      description: 'Systematic analysis of themes, poetic techniques, tone, and comparison across the 20 CXC prescribed poems for Paper 02.',
+      dayOfWeek: 'Thursday',
+      startTime: '17:00',
+      endTime: '18:30',
       capacity: 8,
       enrolledCount: 5,
-      priceJMD: 3500,
+      priceJMD: 4200,
       term: 'Michaelmas 2026',
     },
     {
-      programmeSlug: 'pep-language-arts',
-      title: 'Grade 6 Language Arts CBT Workshop',
-      description: 'Comprehensive preparation for the PEP Curriculum-Based Test covering reading comprehension, grammar, vocabulary, and composition.',
-      dayOfWeek: 'Wednesday',
-      startTime: '16:00',
-      endTime: '17:30',
-      capacity: 8,
-      enrolledCount: 6,
-      priceJMD: 3500,
-      term: 'Michaelmas 2026',
-    },
-    {
-      programmeSlug: 'pep-language-arts',
-      title: 'Grade 5 PEP Foundation',
-      description: 'Early preparation programme building the reading, writing, and reasoning foundations your child needs before Grade 6.',
-      dayOfWeek: 'Tuesday',
-      startTime: '16:00',
-      endTime: '17:15',
+      programmeSlug: 'csec-english-b',
+      title: 'CSEC English B: Comparative Prose & Essay Clinic',
+      description: 'Techniques for comparative literary essays, sustained thematic arguments, and timed essay execution for maximum marks.',
+      dayOfWeek: 'Saturday',
+      startTime: '13:00',
+      endTime: '14:30',
       capacity: 8,
       enrolledCount: 3,
-      priceJMD: 3000,
+      priceJMD: 4500,
       term: 'Michaelmas 2026',
     },
     // CSEC Classes
@@ -244,15 +244,15 @@ async function main() {
       term: 'Michaelmas 2026',
     },
     {
-      programmeSlug: 'pep-language-arts',
-      title: 'PEP Performance Tasks Workshop',
-      description: 'Practise real-world scenario tasks requiring integrated analysis and constructed responses for PEP assessment.',
+      programmeSlug: 'csec-english-b',
+      title: 'CSEC Literature SBA & Oral Presentation Clinic',
+      description: 'Individualized guidance on your English B SBA portfolio pieces, critical response reflections, and oral presentation delivery.',
       dayOfWeek: 'Saturday',
-      startTime: '14:00',
-      endTime: '15:30',
+      startTime: '15:00',
+      endTime: '16:30',
       capacity: 8,
-      enrolledCount: 0,
-      priceJMD: 3500,
+      enrolledCount: 2,
+      priceJMD: 4200,
       term: 'Michaelmas 2026',
     },
   ];
@@ -305,10 +305,10 @@ async function main() {
     },
     {
       parentName: 'Mrs. Thompson',
-      studentGrade: 'Grade 5',
-      programme: 'PEP Language Arts',
+      studentGrade: 'Grade 11',
+      programme: 'CSEC English B (Literature)',
       rating: 5,
-      content: 'We started early to give our son the best preparation for Grade 6. After just two months, his writing has improved dramatically. He actually enjoys doing his English homework now!',
+      content: 'Farika brought Shakespeare and the prescribed CXC poems to life for my daughter. Her grades moved from a Grade III to a confident Grade I with distinctions in both Drama and Poetry analysis!',
       isPublished: true,
     },
     {
@@ -329,51 +329,39 @@ async function main() {
   // ── Blog Posts ──────────────────────────────────────────
   const blogPosts = [
     {
-      title: 'How to Prepare Your Child for the PEP Ability Test',
-      slug: 'how-to-prepare-for-pep-ability-test',
-      excerpt: 'The PEP Ability Test isn\'t about memorising facts — it\'s about thinking skills. Here are proven strategies to help your child build the verbal reasoning and analytical abilities the test demands.',
-      content: `The PEP Ability Test is unlike any other exam your child will sit. It doesn't test what they've memorised from the curriculum — instead, it evaluates their ability to think logically, spot patterns, and reason with language.
+      title: 'How to Tackle CSEC English B Paper 02: Drama, Poetry & Prose Guide',
+      slug: 'csec-english-b-paper-02-guide',
+      excerpt: 'CSEC English B rewards deep analytical thinking, nuanced comparison, and precise textual support. Here are proven strategies to master Drama, Poetry, and Prose for a Grade I.',
+      content: `CSEC English B (Literature in English) is one of the most rewarding — and intellectually demanding — subjects in the CXC curriculum. Success requires moving beyond mere plot summaries into close textual analysis, stylistic evaluation, and structured comparative essays.
 
-Many parents feel anxious because they can't simply drill their child with past papers the way they might for a content-based test. But the good news is that the skills tested in the Ability Test can absolutely be developed with the right approach.
+Understanding the Three Sections of Paper 02
 
-Understanding What's Being Tested
+Section A: Drama (Shakespeare and Modern Drama)
+Whether analyzing Macbeth, Twelfth Night, or 20th-century Caribbean playwrights like Ti-Jean and His Brothers:
+- Focus on dramatic techniques: soliloquies, asides, dramatic irony, lighting, staging, and foils.
+- Discuss how conflict drives character transformation.
+- Ground your claims with accurate paraphrasing and memorable quotations.
 
-The Ability Test evaluates three core cognitive skills:
+Section B: Poetry (The 20 Prescribed CXC Poems)
+The poetry section tests both single-poem analysis and comparative capability:
+- Group your poems thematically (e.g., identity and oppression, nature, love and loss, childhood memories).
+- Identify the speaker, tone shifts, figurative language (metaphors, personification, sensory imagery), and sound devices.
+- In comparative questions, weave both poems together paragraph by paragraph using connective transitions rather than writing two separate essays.
 
-Verbal Reasoning: Understanding word relationships, analogies, and classifications. For example, "Book is to Read as Fork is to ___." Your child needs to recognise that the relationship is "tool to function."
+Section C: Prose Fiction (Novels and Short Stories)
+Prose questions evaluate your appreciation of narrative craft:
+- Analyze point of view, pacing, recurring motifs, and thematic resolution.
+- Contrast characters' internal values with societal pressures.
+- Always link your observations back to the author's broader societal message.
 
-Logical Deduction: Drawing conclusions from given statements. These questions often use "if-then" logic and require careful reading.
-
-Pattern Recognition: Identifying sequences and relationships in language-based puzzles.
-
-Five Strategies That Work
-
-1. Read Widely and Discuss What You Read
-The single most powerful thing you can do is read with your child every day. But don't just read — discuss. Ask questions like "Why do you think the character did that?" and "What might happen next?" This builds inferential thinking.
-
-2. Play Word Games
-Crossword puzzles, word associations, analogies, and even Scrabble develop the verbal reasoning skills the Ability Test measures. Make it fun — 15 minutes of word games daily is more effective than an hour of forced study.
-
-3. Practise Logical Puzzles
-Give your child age-appropriate logic puzzles. Start simple and gradually increase difficulty. The goal is to build comfort with structured thinking, not to frustrate them.
-
-4. Build Vocabulary in Context
-Don't just learn word lists. When your child encounters a new word in reading, discuss its meaning, use it in sentences, and explore related words. This builds the deep vocabulary understanding the test requires.
-
-5. Manage Test Anxiety
-Familiarise your child with the test format so they know what to expect. Practice under timed conditions occasionally, but keep the atmosphere positive. A calm, confident child performs better than an anxious one, regardless of preparation level.
-
-When to Start Preparing
-
-Ideally, begin building these skills from Grade 4. The Ability Test draws on years of cognitive development, not a few months of cramming. Grade 5 is still a good time to start dedicated preparation, but don't wait until Grade 6 — by then, you're playing catch-up.
-
-The key is consistency. Short, regular practice sessions (20–30 minutes, 4–5 times per week) are far more effective than marathon weekend cramming sessions.
-
-If you'd like structured preparation with expert guidance, our PEP Language Arts programme includes dedicated Ability Test preparation with practice materials and strategies tailored to each student's strengths and weaknesses.`,
-      metaDescription: 'Learn proven strategies to prepare your child for the PEP Ability Test in Jamaica. Tips for verbal reasoning, logical deduction, and building thinking skills for Grade 6.',
-      tags: 'PEP,Ability Test,Grade 6,Jamaica,exam prep',
+The Structure of a Top-Band Literature Essay
+1. Introduction: Clear thesis statement, mention of author and text titles, and a roadmap of your main analytical points.
+2. Body Paragraphs (PEEAL): Point, Evidence (quotations), Explanation (technique analysis), Audience Effect, and Link back to the question.
+3. Conclusion: Synthesize your arguments and reflect on the enduring human truth conveyed by the writer.`,
+      metaDescription: 'Complete guide to scoring a Grade I in CSEC English B (Literature). Expert tips on Drama, Poetry comparison, and Prose essay structure from Farika Atkins.',
+      tags: 'CSEC Literature,English B,CXC,Poetry Analysis,Drama,Jamaica',
       isPublished: true,
-      publishedAt: new Date('2026-09-01'),
+      publishedAt: new Date(),
     },
     {
       title: 'CSEC English A: A Complete Guide to Paper 02',

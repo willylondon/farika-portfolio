@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold tracking-wider text-slate-900 uppercase">Programmes</h3>
             <ul className="mt-4 space-y-4 text-sm text-slate-600">
-              <li><Link href="/programmes/pep-language-arts" className="hover:text-blue-600">PEP Preparation</Link></li>
+              <li><Link href="/programmes/csec-english-b" className="hover:text-blue-600">CSEC English B (Literature)</Link></li>
               <li><Link href="/programmes/csec-english-a" className="hover:text-blue-600">CSEC English A</Link></li>
               <li><Link href="/programmes/igcse-english-language" className="hover:text-blue-600">IGCSE English</Link></li>
               <li><Link href="/programmes/ib-english" className="hover:text-blue-600">IB English</Link></li>

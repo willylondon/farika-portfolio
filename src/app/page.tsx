@@ -6,7 +6,7 @@ import { cn, getProgrammeColor, getSeatsRemaining, PROGRAMME_DATA, formatPrice }
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Expert English & Language Arts Tutoring in Jamaica. Enroll in PEP, CSEC, IGCSE, and IB English classes.',
+  description: 'Expert English & Literature Tutoring in Jamaica. Specialized in CSEC English A & B (Literature), IGCSE, and IB English.',
 };
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -44,10 +44,10 @@ export default async function HomePage() {
       <section className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white section-padding overflow-hidden">
         <div className="container-main relative z-10 text-center">
           <h1 className="heading-1 font-serif text-white mb-6">
-            Expert English & Language Arts Tutoring
+            Expert English & Literature Tutoring
           </h1>
           <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-blue-100">
-            Specialized preparation for PEP, CSEC, IGCSE, and IB examinations. Build confidence and achieve excellence.
+            Specialized instruction for CSEC English A, CSEC English B (Literature), IGCSE, and IB examinations.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link href="/classes" className="btn-primary px-8 py-4 text-lg">
@@ -103,7 +103,7 @@ export default async function HomePage() {
                 <Award className="h-8 w-8 text-amber-600" />
               </div>
               <h3 className="text-xl font-bold mb-3">Exam-Focused Expertise</h3>
-              <p className="body-text">Specialized training for PEP, CXC, Cambridge, and IB English requirements.</p>
+              <p className="body-text">Specialized training for CSEC, CAPE, Cambridge IGCSE, and IB English requirements.</p>
             </div>
             <div>
               <div className="mx-auto bg-green-100 w-16 h-16 flex items-center justify-center rounded-full mb-6">

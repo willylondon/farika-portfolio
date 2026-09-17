@@ -70,7 +70,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="subject" className="label-text">Subject *</label>
-          <input type="text" id="subject" name="subject" required className="input-field" placeholder="Inquiry about PEP Programme" />
+          <input type="text" id="subject" name="subject" required className="input-field" placeholder="Inquiry about CSEC Literature or English A" />
         </div>
 
         <div>
