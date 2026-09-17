@@ -27,8 +27,8 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-1">Email Us</h3>
-              <p className="text-slate-600 mb-2">For general inquiries and support.</p>
-              <a href="mailto:info@englishlanguageja.com" className="text-blue-600 hover:underline font-medium">info@englishlanguageja.com</a>
+              <p className="text-slate-600 mb-2">For course inquiries and registration support.</p>
+              <a href="mailto:farikaatkins@gmail.com" className="text-blue-600 hover:underline font-medium">farikaatkins@gmail.com</a>
             </div>
           </div>
 
@@ -38,8 +38,8 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-1">Call Us</h3>
-              <p className="text-slate-600 mb-2">Mon-Fri from 9am to 6pm EST.</p>
-              <a href="tel:+18765550123" className="text-blue-600 hover:underline font-medium">+1 (876) 555-0123</a>
+              <p className="text-slate-600 mb-2">Mon–Sat from 9am to 6pm EST.</p>
+              <a href="tel:+18762952776" className="text-blue-600 hover:underline font-medium">+1 (876) 295-2776</a>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-1">Location</h3>
-              <p className="text-slate-600">All classes are currently conducted online via Zoom/Google Meet to serve students across Jamaica.</p>
+              <p className="text-slate-600">Classes are conducted online (Zoom / Google Meet) for students across Kingston, Montego Bay, and all parishes in Jamaica.</p>
             </div>
           </div>
 
@@ -58,8 +58,8 @@ export default function ContactPage() {
               <MessageCircle className="w-6 h-6 text-green-400" />
               Prefer WhatsApp?
             </h3>
-            <p className="text-slate-300 mb-6">Send us a quick message on WhatsApp for faster responses regarding scheduling or immediate concerns.</p>
-            <a href="https://wa.me/18765550123" target="_blank" rel="noopener noreferrer" className="btn-success w-full text-center inline-block py-3 rounded-lg font-medium">
+            <p className="text-slate-300 mb-6">Send us a message on WhatsApp for fast answers regarding course placement, schedule availability, or sibling discounts.</p>
+            <a href="https://wa.me/18762952776" target="_blank" rel="noopener noreferrer" className="btn-success w-full text-center inline-block py-3 rounded-lg font-medium">
               Chat on WhatsApp
             </a>
           </div>

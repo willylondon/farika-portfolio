@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Users, Target, MessageSquare, Heart, GraduationCap, Award, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -22,31 +23,52 @@ export default function AboutPage() {
       <div className="container-main section-padding">
         <section className="mb-24 flex flex-col md:flex-row gap-12 items-center">
           <div className="w-full md:w-1/3">
-            <div className="aspect-square bg-slate-100 rounded-2xl flex items-center justify-center border-2 border-slate-200">
-              <div className="text-slate-400 flex flex-col items-center">
-                <Users className="w-24 h-24 mb-4 opacity-50" />
-                <span className="text-lg font-medium">Head Educator</span>
-              </div>
+            <div className="relative aspect-square w-full max-w-sm mx-auto overflow-hidden rounded-2xl shadow-xl border-4 border-white">
+              <Image 
+                src="/farika.webp" 
+                alt="Farika Atkins — Lead Educator & Curriculum Specialist" 
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
           <div className="w-full md:w-2/3">
-            <h2 className="heading-2 mb-2">Meet Our Lead Educator</h2>
-            <p className="text-blue-600 font-medium mb-6">BA English, MA Education • 10+ Years Experience</p>
-            <div className="prose prose-slate max-w-none">
-              <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                &quot;My teaching philosophy centers on the belief that every student has the potential to excel in English when provided with the right structure, support, and encouragement. I focus on building strong foundational skills while developing critical thinking abilities essential for higher-level exams.&quot;
+            <div className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-3">
+              Lead Educator & Curriculum Strategist
+            </div>
+            <h2 className="heading-2 mb-2 font-serif">Farika Atkins</h2>
+            <p className="text-blue-600 font-medium mb-6">English Education Leader • Grades 4–13 Specialist</p>
+            <div className="prose prose-slate max-w-none space-y-4 text-slate-700 text-lg leading-relaxed">
+              <p>
+                &ldquo;My work centers on rigorous instruction, inclusive practice, and long-term student growth. Whether preparing a student for high-stakes examinations or cultivating lifelong reading and composition skills, I believe in structured guidance combined with personal encouragement.&rdquo;
+              </p>
+              <p className="text-base text-slate-600">
+                With deep expertise spanning Jamaica&apos;s Ministry of Education curricula (PEP, CSEC, CAPE) as well as international frameworks (Cambridge IGCSE and IB Diploma), Farika partners with students and parents to build confidence, critical thinking, and exam mastery.
               </p>
             </div>
             
             <div className="mt-8">
-              <h3 className="font-semibold text-slate-900 mb-4">Specializations</h3>
+              <h3 className="font-semibold text-slate-900 mb-4">Areas of Expertise</h3>
               <div className="flex flex-wrap gap-2">
-                {['CSEC English A & B', 'CAPE Literatures', 'IB English A', 'Creative Writing', 'Comprehension Strategies'].map(spec => (
+                {['PEP Language Arts', 'CSEC English A', 'IGCSE First Language', 'IB English A', 'Essay Writing & SBA', 'Comprehension & Analysis'].map(spec => (
                   <span key={spec} className="badge bg-blue-50 text-blue-700 border border-blue-200">
                     {spec}
                   </span>
                 ))}
               </div>
+            </div>
+
+            <div className="mt-6 pt-6 border-t border-slate-200 flex flex-wrap gap-6 text-sm text-slate-600">
+              <a href="https://farikaatkins.online" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-medium hover:underline flex items-center gap-1">
+                View Farika&apos;s Full Portfolio &rarr;
+              </a>
+              <a href="mailto:farikaatkins@gmail.com" className="text-slate-600 hover:text-blue-600">
+                farikaatkins@gmail.com
+              </a>
+              <a href="tel:+18762952776" className="text-slate-600 hover:text-blue-600">
+                +1 (876) 295-2776
+              </a>
             </div>
           </div>
         </section>

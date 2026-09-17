@@ -56,9 +56,14 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-blue-600">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-blue-600">Contact</Link></li>
             </ul>
-            <div className="mt-6 text-sm text-slate-600">
-              <p>Email: info@theenglishlanguage.com.jm</p>
-              <p className="mt-2">Phone: +1 (876) 555-0123</p>
+            <div className="mt-6 text-sm text-slate-600 space-y-1">
+              <p><a href="mailto:farikaatkins@gmail.com" className="hover:text-blue-600">farikaatkins@gmail.com</a></p>
+              <p><a href="tel:+18762952776" className="hover:text-blue-600">+1 (876) 295-2776</a></p>
+              <p className="pt-2">
+                <a href="https://farikaatkins.online" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
+                  Farika Atkins Portfolio &rarr;
+                </a>
+              </p>
             </div>
           </div>
         </div>
